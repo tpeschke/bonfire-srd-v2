@@ -1,0 +1,90 @@
+.header-shell {
+    position: sticky;
+    top: 0px;
+    max-width: 1390px;
+    margin: 0 auto;
+    background: #222;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+}
+
+.header-shell .title-shell {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-shell .icon-shell {
+    display: flex;
+}
+
+.header-shell .title-shell h1 {
+    font-size: 28px;
+}
+
+.header-shell .title-shell p {
+    position: absolute;
+    font-family: "Whisper";
+    color: #b45f06;
+    top: -2px;
+    right: -38px;
+    font-size: 45px;
+}
+
+.header-shell>div>img {
+    position: absolute;
+    height: 50px;
+}
+
+.header-shell>div:first-child {
+    position: relative;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-shell>div>a {
+    margin-left: 50px;
+}
+
+.header-shell i {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+i.active {
+    color: #b45f0650
+}
+
+.header-spacer {
+    margin-right: 25px;
+}
+
+@media (max-width: 769px) {
+    .header-shell i {
+        margin-left: 25px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 426px) {
+    .header-shell {
+        flex-direction: column;
+    }
+
+    .header-shell>div:first-child {
+        margin: 0 0 25px;
+    }
+
+    .header-shell .icon-shell {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .icon-shell .header-spacer, .header-shell i {
+        margin: 0;
+    }
+}

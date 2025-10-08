@@ -1,0 +1,13 @@
+.content-display-body-shell img.class-image {
+    height: 600px;
+    width: unset;
+    margin-bottom: 0;
+}
+
+@media (max-width: 426px) {
+    .content-display-body-shell img.class-image {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+}

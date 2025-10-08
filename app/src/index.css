@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Whisper&display=swap');
+
+@font-face {
+	font-family: 'oldClaude';
+	src: url('./assets/fonts/OldClaude.otf') format("opentype");
+}
+
+@font-face {
+	font-family: 'HamletOrNot';
+	src: url('./assets/fonts/HamletOrNot.ttf') format("truetype");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	line-height: 16px;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background: black;
+	min-height: 100vh;
+}
+
+ol, ul {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	margin: 15px 5px;
+}
+
+li {
+	padding: 2px 0px;
+	margin-left: 45px;
+}
+
+ol.horizontal-list, ul.horizontal-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+ol.horizontal-list li, ul.horizontal-list li {
+	margin-right: 25px;
+	min-width: 25%;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+	margin: 5px 0 0 5px;
+}
+
+blockquote, q {
+	quotes: none;
+	background: lightgray;
+    padding: 10px 0 5px;
+    margin: 15px 0;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+blockquote p {
+	text-align: center;
+	text-indent: 0;
+}
+
+h1 {
+	font-family: 'HamletOrNot';
+	letter-spacing: 2px;
+	font-size: 18px;
+}
+
+h2 {
+	letter-spacing: 2px;
+	font-family: 'oldClaude';
+}
+
+h3 {
+	font-size: 15px;
+	font-family: 'oldClaude';
+	letter-spacing: 1px;
+}
+
+h4 {
+	font-family: 'oldClaude';
+	font-weight: bold;
+	font-size: 14px;
+	color: #222;
+	margin: 15px 0 5px;
+	letter-spacing: 1px;
+}
+
+h5 {
+	font-family: 'oldClaude';
+    font-size: 12px;
+    color: #222;
+    margin: 15px 0 5px;
+    letter-spacing: 1px;
+}
+
+h6 {
+	font-family: 'oldClaude';
+	font-size: 14px;
+}
+
+p, label {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 15px;
+	min-height: 1px;
+	line-height: 1.2;
+	margin-bottom: 5px;
+}
+
+strong {
+	font-family: 'oldClaude';
+	font-weight: unset;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+a, .fake-link {
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+}
+
+a:hover, .fake-link:hover {
+	color: #b45f06;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.light-gray {
+	background: rgb(190, 190, 190);
+}
+
+.gray {
+	background: gray !important;
+	color: white
+}
+
+.text-left {
+	text-align: left;
+}
+
+.left-border-gray {
+	border-left: 1px solid gray;
+}
+
+.react-tooltip {
+	z-index: 2;
+}
+
+select {
+	border: none;
+	background: #f3f3f3;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	min-width: 150px;
+	font-family: "Source Sans 3", sans-serif;
+}
+
+select:hover {
+	background: #e1e7ea;
+}
+
+select:open {
+	background: #e1e7ea;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+select * {
+	background-color: white;
+}
+
+input {
+	font-family: 'oldClaude';
+	border: unset;
+	border-bottom: 1px solid lightgray;
+	transition: .6s;
+}
+
+input[type=number] {
+	text-align: right;
+}
+
+input:focus-visible {
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+button {
+	border: none;
+	padding: 5px;
+	margin-right: 3px;
+	border-radius: 5px;
+	font-family: "Source Sans 3", sans-serif;
+	cursor: pointer;
+	background: #e1e7ea;
+}
+
+button:hover {
+	background: #c9cfd1;
+}
+
+button:disabled, button:disabled:hover {
+	background: white;
+	cursor: unset;
+}
+
+button.blue {
+	background: #8aa0ab;
+	color: white;
+}
+
+button.blue:hover {
+	background: #63747d;
+}
+
+button.orange {
+	background: #ff5722;
+	color: white;
+}
+
+button.orange:hover {
+	background: #ec5121;
+}
+
+button.transparent-white {
+	background: transparent;
+	color: white;
+}
+
+button.transparent-white:hover {
+	background: #00000046;
+}
+
+.hidden-button {
+	cursor: pointer;
+}
+
+em {
+	font-style: italic;
+}
+
+.warning {
+	color: #990000;
+	font-style: italic;
+}
+
+.displayNone {
+	display: none;
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: grey;
+	border-radius: 4px;
+}
+
+.responsive-table {
+	overflow: auto;
+	float: right;
+    margin: 0 0 15px 15px;
+    max-width: 50%;
+}

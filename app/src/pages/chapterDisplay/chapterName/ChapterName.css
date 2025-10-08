@@ -1,0 +1,26 @@
+.chapter-name-header-shell {
+    padding: 75px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter-name-header-shell h1 {
+    line-height: 100%;
+    background: transparent;
+    font-size: 30px;
+    margin: 0 !important;
+    color: whitesmoke;
+    font-weight: 700;
+    font-family: "HamletOrNot";
+    padding: 5px 0 5px 5px;
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.chapter-name-header-shell img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+}

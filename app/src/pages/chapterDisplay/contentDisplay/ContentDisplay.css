@@ -1,0 +1,207 @@
+.content-display-shell {
+    width: 100%;
+}
+
+.content-display-body-shell {
+    background: whitesmoke;
+    padding: 15px 30px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    background-image: url('../../../assets/images/chapterBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.content-display-body-shell img {
+    margin: 0 0 15px 15px;
+    float: right;
+    width: 50%;
+}
+
+textarea.content-display-shell {
+    height: 828px;
+    cursor: pointer;
+}
+
+.component-shell {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    background: lightblue;
+}
+
+.content-display-body-shell h1 {
+    color: whitesmoke;
+    background: #990000;
+    font-weight: 700;
+    font-size: 15pt;
+    font-family: "HamletOrNot";
+    padding: 5px 0 9px;
+    margin: 25px 0 15px;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+    text-shadow: 3px 3px black;
+}
+
+.content-display-body-shell h1::first-letter {
+    font-size: 25pt;
+    background: #990000;
+    padding: 0 10px;
+    margin-right: -7px;
+}
+
+.content-display-body-shell h1:first-child {
+    margin: 0 0 15px;
+}
+
+.content-display-body-shell h2 {
+    color: #990000;
+    font-weight: bold;
+    font-family: "HamletOrNot";
+    padding: 5px 15px 5px 0px;
+    margin: 15px 0 5px;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.content-display-body-shell h2::first-letter {
+    font-size: 20px;
+}
+
+.content-display-shell h3 {
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.content-display-body-shell h1:hover::before, .content-display-body-shell h2:hover::before {
+    content: "🔗";
+    position: absolute;
+    left: -25px;
+    color: transparent;
+    text-shadow: 0 0 0 #222;
+}
+
+.content-display-shell p {
+    text-indent: 30px;
+}
+
+.content-display-shell a {
+    color: unset;
+    font-family: 'oldClaude';
+}
+
+.content-display-shell a:hover {
+    color: #b45f06
+}
+
+.content-display-shell strong {
+    font-weight: bold;
+}
+
+.content-display-shell div.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 15px;
+}
+
+.responsive-table:has(table.no-float) {
+    float: unset !important;
+    margin: 0 auto 15px;
+    max-width: unset;
+}
+
+.no-float.justify-left {
+    margin: 0 0 15px;
+}
+
+table.center-not-first-column tr td, table.center-not-first-column tr th {
+    text-align: center;
+}
+
+table.center-not-first-column tr td:first-child, table.center-not-first-column tr th:first-child {
+    text-align: left;
+}
+
+.float-left {
+    float: left !important;
+    margin: 0 auto 15px !important;
+}
+
+.title-heading {
+    background: #222;
+}
+
+table .center-row {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.float-left tr th, .no-float tr th {
+    text-align: left;
+}
+
+thead {
+    background: gray;
+    color: white;
+    text-align: left;
+}
+
+tr th, tr td {
+    padding: 3px 5px
+}
+
+tbody tr:nth-child(odd) {
+    background: whitesmoke;
+}
+
+tbody tr:nth-child(even) {
+    background: lightgray;
+}
+
+@media (max-width: 769px) {
+    table {
+        float: unset;
+        margin: 15px auto;
+        max-width: unset;
+    }
+
+    .responsive-table {
+        margin: 0;
+        max-width: 100%;
+        float: unset
+    }
+
+    .content-display-body-shell img {
+        float: unset;
+        width: 100%;
+        margin: 0;
+    }
+
+    p:has(img) {
+        text-indent: 0 !important;
+    }
+}
+
+@media (max-width: 426px) {
+    .content-display-body-shell {
+        padding: 15px 5px
+    }
+
+    .chapter-name-header-shell h1 {
+        text-shadow: -5px 0 #212, 0 5px #212, 5px 0 #212, 0 -5px #212;
+        text-align: center;
+    }
+
+    .content-display-body-shell img {
+        margin: 0;
+        float: unset;
+    }
+}

@@ -1,0 +1,72 @@
+.chapter-navigate-shell {
+    min-width: 306px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    position: sticky;
+    top: 82px;
+    height: 100%;
+}
+
+.chapter-navigate-shell h1, .chapter-navigate-shell h2 {
+    color: white;
+}
+
+.chapter-navigate-shell h1 {
+    padding: 5px 0 5px 3px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.player-heading {
+    margin-top: 15px;
+}
+
+.chapter-navigate-shell h2 {
+    padding: 5px 5px 5px 15px;
+}
+
+.chapter-navigate-shell h2:hover {
+    color: #b45f06
+}
+
+.active-route h2 {
+    border-left: 2px solid #b45f06;
+    background: #b45f0650
+}
+
+.chapter-hamburger-menu {
+    display: none;
+}
+
+.chapter-hamburger-menu i {
+    color: white;
+    font-size: 40px;
+}
+
+@media (max-width: 769px) {
+    .chapter-hamburger-menu {
+        display: unset;
+        padding: 25px;
+        height: 10px;
+        border-bottom: 1px solid gray;
+        margin: -15px 0 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .chapter-navigate-shell {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+    }
+
+    .chapter-navigate-shell {
+        position: unset;
+    }
+
+    .chapter-navigate-shell.closed {
+        display: none;
+    }
+}

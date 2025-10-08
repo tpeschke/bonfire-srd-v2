@@ -4,11 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "vite app",
+    "test": "jest",
+    "build": "lerna run build && npm run replace",
+    "replace": "npm run replace-server",
+    "replace-server": "replace-in-file --configFile=replaceScripts/replace-common-syntax.json --verbose",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "server": "npx tsx backend/server/srd.ts"
   },
+  "workspaces": [
+    "app",
+    "backend/**/*"
+  ],
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "^1.11.0",

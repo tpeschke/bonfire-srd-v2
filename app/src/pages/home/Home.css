@@ -1,0 +1,189 @@
+.home-shell .columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-shell .columns>div {
+    width: 100%;
+}
+
+.home-shell .right {
+    margin-left: 15px;
+}
+
+.home-shell .card {
+    background: whitesmoke;
+    padding: 15px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 15px;
+}
+
+.home-shell .card h1 {
+    color: #990000;
+    font-size: 15pt;
+    margin-bottom: 15px;
+}
+
+.home-shell a .card {
+    color: black;
+}
+
+.home-shell a .card p.subtitle {
+    margin-top: 5px;
+    border-bottom: 1px solid #222;
+}
+
+.home-shell a:hover .card {
+    color: #b45f06
+}
+
+.card .patreon-shell {
+    overflow: hidden;
+    height: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card .patreon-shell p {
+    font-size: 21px;
+    width: 34%;
+    font-family: 'OldClaude';
+    border-bottom: unset;
+}
+
+.card span {
+    display: flex;
+}
+
+.card span i {
+    color: black;
+    font-size: 18px;
+}
+
+.home-shell .card.discord-card {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.home-shell .card.discord-card {
+    color: #7289DA;
+    background: transparent;
+}
+
+.discord-card>div {
+    margin-left: 15px;
+}
+
+.home-shell .card.discord-card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    line-height: 100%;
+}
+
+.home-shell .card.discord-card p {
+    color: white;
+}
+
+.fa-discord {
+    font-size: 100px;
+    transform: rotate(-12deg);
+}
+
+.login-logout-shell {
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login-logout-shell button {
+    font-size: 25px;
+    padding: 10px 15px;
+    min-width: 300px;
+}
+
+.login-logout-shell button {
+    background: #b45f06;
+    color: #ffffff;
+    font-family: 'HamletOrNot';
+    letter-spacing: 2px;
+}
+
+.login-logout-shell button:hover {
+    background: #914d05;
+}
+
+.login-logout-shell .patreon-button {
+    background: #ff424d;
+}
+
+.login-logout-shell .patreon-button:hover {
+    background: #d83840;
+}
+
+.tools-and-resources-shell a {
+    color: black;
+    font-family: 'OldClaude';
+}
+
+.tools-and-resources-shell a:hover {
+    color: #b45f06
+}
+
+.tools-and-resources-shell p {
+    text-indent: 15px;
+}
+
+.tools-and-resources-shell>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1025px) {
+    .home-shell .columns {
+        flex-direction: column-reverse;
+    }
+
+    .home-shell .columns>div {
+        width: unset;
+    }
+
+    .tools-and-resources-shell>div {
+        flex-direction: column;
+    }
+
+    .login-logout-shell {
+        height: unset;
+        margin: 35px 15px;
+        flex-direction: unset;
+        flex-wrap: wrap;
+    }
+
+    .login-logout-shell button {
+        margin-top: 15px;
+    }
+
+    .home-shell .card.discord-card h2 {
+        line-height: 100%;
+    }
+}
+
+@media (max-width: 769px) {
+    .home-shell .right {
+        margin-top: 15px;
+    }
+
+    .login-logout-shell {
+        margin: 35px 0
+    }
+}
+
+@media (max-width: 426px) {
+    .home-shell .right {
+        margin-left: 0;
+    }
+}

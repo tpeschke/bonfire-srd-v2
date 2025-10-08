@@ -1,0 +1,58 @@
+.inner-nav-shell {
+    width: 300px;
+    padding: 0 15px;
+    position: sticky;
+    top: 82px;
+    height: 100%;
+}
+
+.inner-nav-shell .quick-link-shell {
+    overflow: auto;
+    height: calc(100vh - 145px);
+}
+
+.inner-nav-shell ::-webkit-scrollbar {
+	width: 1px;
+}
+
+.inner-nav-shell h1, .inner-nav-shell h2, .inner-nav-shell p {
+    color: white;
+}
+
+.inner-nav-shell h1 {
+    padding: 5px 0 5px 3px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid gray;
+}
+
+.inner-nav-shell h2:hover, .inner-nav-shell h3:hover {
+    color: #b45f06
+}
+
+.inner-nav-shell h2, .inner-nav-shell h3 {
+    border-left: 2px solid transparent;
+}
+
+.inner-nav-shell h2 {
+    padding: 5px 5px 5px 15px;
+}
+
+.inner-nav-shell h3 {
+    padding: 5px 5px 5px 30px;
+}
+
+.active h2, .active h3 {
+    border-left: 2px solid #b45f06;
+    background: #b45f0650
+}
+
+.inner-nav-shell h2 i {
+    font-size: 100px;
+    cursor: pointer;
+}
+
+@media (max-width: 1025px) {
+    .inner-nav-shell {
+        display: none;
+    }
+}
