@@ -14,7 +14,7 @@ import RangedWeaponStats from './inlineComponents/equipmentTables/RangedWeaponSt
 
 interface Props {
     componentInfo: ComponentContent,
-    chapterInfo: ChapterInfoBaseObject | null
+    chapterInfo?: ChapterInfoBaseObject | null
 }
 
 export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
@@ -22,31 +22,31 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'characteristicGenerator':
             return <CharacteristicGenerator />
         case 'dwarfImage':
-            return <Image src='ancestries/dwarf.png' />
+            return <Image src='https://i.imgur.com/wmRFD94.png' />
         case 'elfImage':
-            return <Image src='ancestries/elf.png' />
+            return <Image src='https://i.imgur.com/j6rAlEw.png' />
         case 'humanImage':
-            return <Image src='ancestries/human.png' />
+            return <Image src='https://i.imgur.com/cKtlDOs.png' />
         case 'orcImage':
-            return <Image src='ancestries/orc.png' />
+            return <Image src='https://i.imgur.com/SSFLhnr.png' />
         case 'pechImage':
-            return <Image src='ancestries/pech.png' />
+            return <Image src='https://i.imgur.com/T8Kr1KQ.png' />
         case 'ratfolkImage':
-            return <Image src='ancestries/ratfolk.png' />
+            return <Image src='https://i.imgur.com/TRJphC6.png' />
         case 'gauntImage':
-            return <Image src='ancestries/gaunt.png' />
+            return <Image src='https://i.imgur.com/f3F1CIC.png' />
         case 'starCursedImage':
-            return <Image src='ancestries/starCursed.png' />
+            return <Image src='https://i.imgur.com/rok7r6M.png' />
         case 'expertImage':
-            return <Image isClass={true} src='classes/expert.png' />
+            return <Image isClass={true} src='https://i.imgur.com/oe59eQA.png' />
         case 'fighterImage':
-            return <Image isClass={true} src='classes/fighter.png' />
+            return <Image isClass={true} src='https://i.imgur.com/sEyzgEB.png' />
         case 'servantImage':
-            return <Image isClass={true} src='classes/servant.png' />
+            return <Image isClass={true} src='https://i.imgur.com/aGHwKaf.png' />
         case 'socialiteImage':
-            return <Image isClass={true} src='classes/socialite.png' />
+            return <Image isClass={true} src='https://i.imgur.com/YH1ELml.png' />
         case 'weirdAdeptImage':
-            return <Image isClass={true} src='classes/weirdAdept.png' />
+            return <Image isClass={true} src='https://i.imgur.com/sa2dkYn.png' />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

@@ -4,6 +4,7 @@ import { chapterURL } from '../frontend-config.ts'
 import { useDispatch, useSelector } from "react-redux"
 import { saveChapter } from "../redux/slices/chapterSlice.tsx"
 import { ChapterContentsReturn } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces.ts"
+import { delay } from '@srd/common/utilities/timingFunctions.ts'
 
 interface ChapterHookReturn {
     chapter: ChapterContentsReturn | null,
@@ -123,8 +124,4 @@ export default function ChapterHook(pathname?: string): ChapterHookReturn {
         saveChapterToCache,
         backgroundPreloadChapter
     }
-}
-
-function delay(arg0: number) {
-    throw new Error("Function not implemented.")
 }

@@ -8,7 +8,7 @@ interface Props {
 export default function Image({ src, isClass = false }: Props) {
     return (
         <a href='https://www.gorangligovic.com/' target='_blank'>
-            <img className={isClass ? 'class-image' : ''} src={'/src/assets/images/' + src} />
+            <img className={isClass ? 'class-image' : ''} src={src} />
         </a>
     )
 }
