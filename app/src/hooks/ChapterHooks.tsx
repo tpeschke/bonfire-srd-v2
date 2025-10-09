@@ -1,10 +1,9 @@
-import { ChapterContentsReturn } from "@srd/common/interfaces/chapterInterfaces/chapterInterfaces"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { chapterURL } from '../frontend-config.ts'
 import { useDispatch, useSelector } from "react-redux"
 import { saveChapter } from "../redux/slices/chapterSlice.tsx"
-import { resolve } from "path"
+import { ChapterContentsReturn } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces.ts"
 
 interface ChapterHookReturn {
     chapter: ChapterContentsReturn | null,
