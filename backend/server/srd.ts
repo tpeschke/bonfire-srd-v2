@@ -13,6 +13,8 @@ import cors from 'cors'
 // @ts-ignore
 import path from 'path'
 
+import { Response, Request } from './interfaces/apiInterfaces'
+
 import { callbackURL, clientID, clientSecret, domain, fakeAuth, secret, server } from './server-config'
 
 import authRoutesWithoutPassword from './routes/authentication'
@@ -73,10 +75,10 @@ app.use('/search', searchRoutes)
 app.use('/patreon', patreonRoutes)
 app.use('/characteristic', characteristicRoutes)
 
-app.use(express.static(__dirname + `/../../app/dist`));
-// app.get('/*', (request: Request, response: Response) => {
-//     response.sendFile(path.join(__dirname + '/../../app/dist/index.html'))
-// })
+app.use(express.static(__dirname + `/../../../app/dist`));
+app.all('/{*any}', (_: Request, response: Response) => {
+    response.sendFile(path.join(__dirname + '/../../../app/dist/index.html'))
+})
 
 // ================================== \\
 
