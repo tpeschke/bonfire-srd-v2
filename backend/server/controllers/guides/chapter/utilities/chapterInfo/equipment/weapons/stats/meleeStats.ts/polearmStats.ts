@@ -8,8 +8,7 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         recovery: 11,
         damageType: 'P',
         parry: 0,
-        measure: 6,
-        bonus: true
+        measure: 6
     },
     {
         name: 'Bill',
@@ -29,6 +28,7 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'S',
         parry: 0,
         measure: 8,
+        bonus: true
     },
     {
         name: 'Guisarme',
