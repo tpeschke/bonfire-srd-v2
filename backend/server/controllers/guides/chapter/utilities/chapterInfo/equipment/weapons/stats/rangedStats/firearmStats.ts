@@ -12,7 +12,7 @@ export const firearmStats: RangedWeaponStatObject[] = [
         bonus: true
     },
     {
-        name: 'Hakenbuchse',
+        name: 'Arquebus',
         size: 'L',
         ri: 50,
         damage: '1d8!+1d6!',
@@ -22,7 +22,7 @@ export const firearmStats: RangedWeaponStatObject[] = [
         bonus: true
     },
     {
-        name: 'Handgonne',
+        name: 'Hand Canon',
         size: 'L',
         ri: 30,
         damage: '1d8!+1d3!',

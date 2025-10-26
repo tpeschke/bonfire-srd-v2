@@ -1,12 +1,12 @@
 import { EquipmentItem } from "@srd/common/interfaces/chapterInterfaces/EquipmentInterfaces"
 
 export const weaponsRanged: EquipmentItem[] = [
+    { item: 'Arquebus', size: 'L', complexity: 6, basePrice: 235 },
     { item: 'Bellybow', size: 'L', complexity: 4, basePrice: 175 },
     { item: 'Composite Bow', size: 'M', complexity: 4, basePrice: 45 },
     { item: 'Crossbow', size: 'L', complexity: 5, basePrice: 75 },
     { item: 'Fire Lance', size: 'L', complexity: 6, basePrice: 52 },
-    { item: 'Hakenbuchse', size: 'L', complexity: 6, basePrice: 235 },
-    { item: 'Handgonne', size: 'L', complexity: 6, basePrice: 110 },
+    { item: 'Hand Canon', size: 'L', complexity: 6, basePrice: 110 },
     { item: 'Javelin', size: 'M', complexity: 1, basePrice: 8 },
     { item: 'Latchet Crossbow', size: 'M', complexity: 3, basePrice: 50 },
     { item: 'Longbow', size: 'L', complexity: 3, basePrice: 60 },
