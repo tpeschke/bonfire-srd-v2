@@ -111,7 +111,7 @@ const kitInfo: KitInfo = {
                 { item: "Belt, Leather*", size: "n/a", sellBack: "1 sc" },
                 { item: "Breeches*", size: "n/a", sellBack: "12 sc" },
                 { item: "Shirt*", size: "n/a", sellBack: "13 sc" },
-                { item: "Sandals*", size: "n/a", sellBack: "10 sc" }
+                { item: "Sandals*", size: "n/a", sellBack: "0.1 sc" }
             ],
             weight: "2S",
             extraCash: "1d4! sc"
