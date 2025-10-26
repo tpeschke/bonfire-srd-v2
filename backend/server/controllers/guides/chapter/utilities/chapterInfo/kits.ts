@@ -72,7 +72,7 @@ const kitInfo: KitInfo = {
                 { item: "Breeches*", size: "n/a", sellBack: "12 sc" },
                 { item: "Shirt*", size: "n/a", sellBack: "13 sc" },
                 { item: "Boots, Leather*", size: "n/a", sellBack: "10 sc" },
-                { item: "Backpack, Large*", size: "#ERROR!", sellBack: "15 sc" },
+                { item: "Backpack, Large*", size: "+1L", sellBack: "15 sc" },
                 { item: "Rations, Person, Day x1", size: "S", sellBack: "2.5 sc" },
                 { item: "Beeswax", size: "S", sellBack: "0.3 sc" },
                 { item: "Rope, Cotton, 1/2\" (150#), 50 ft x3", size: "1L", sellBack: "72 sc" },
