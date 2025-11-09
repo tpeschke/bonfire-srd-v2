@@ -75,9 +75,9 @@ app.use('/search', searchRoutes)
 app.use('/patreon', patreonRoutes)
 app.use('/characteristic', characteristicRoutes)
 
-app.use(express.static(__dirname + `/../../../app/dist`));
+app.use(express.static(__dirname + `/../../app/dist`));
 app.all('/{*any}', (_: Request, response: Response) => {
-    response.sendFile(path.join(__dirname + '/../../../app/dist/index.html'))
+    response.sendFile(path.join(__dirname + '/../../app/dist/index.html'))
 })
 
 // ================================== \\
