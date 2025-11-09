@@ -3,7 +3,7 @@ import query from "../../../db/database"
 import chapterSQL from '../../../db/queries/chapter'
 import { checkForContentTypeBeforeSending } from "../../common/utilities/sendingFunctions"
 import { chapterCache } from "../cache/getCache"
-import { Books, ChapterContents, ChapterNavigation, LockedChapterContents, LockedNavigation } from '@srd/common/interfaces/chapterInterfaces/ChapterInterfaces'
+import { Books, ChapterContents, ChapterContentsCache, ChapterNavigation, LockedChapterContents, LockedNavigation } from '@srd/common/interfaces/chapterInterfaces/ChapterInterfaces'
 import { rulesChapters, playerChapters } from '@srd/common/utilities/chapters'
 import populateChapterContents from '../utilities/parseChapterContents'
 import { isOwner } from '../../user/ownerFunctions'
@@ -18,25 +18,14 @@ export async function getChapterWorkhorse(request: ChapterRequest, response: Res
     const [book, chapter] = request.params.code.split('.')
     const { user } = request
 
-    if (book === 'rules' || book === 'players') {
-        const cachedChapter = chapterCache[book][+chapter - 1]
-
-        if (cachedChapter) {
-            checkForContentTypeBeforeSending(response, {
-                ...cachedChapter,
-                ...getUserAppropriateChapter(user, cachedChapter.chapterContents, cachedChapter.navigation, cachedChapter.info)
-            })
+    if (book === 'rules') {
+        sendChapterContents(response, user, book, chapter, chapterCache[book][+chapter - 1])
+    } else if (book === 'players') {
+        if (user?.patreon && user?.patreon >= 1) {
+            sendChapterContents(response, user, book, chapter, chapterCache[book][+chapter - 1])
         } else {
-            const [{ chaptercontents }] = await getChapterFromDB(book, chapter)
-
-            const populatedChapter = populateChapterContents(book, +chapter, chaptercontents)
-
-            checkForContentTypeBeforeSending(response, {
-                ...populatedChapter,
-                ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)
-            })
+            checkForContentTypeBeforeSending(response, { message: "You Don't Have Permissions to View These Chapters" })
         }
-
     } else {
         checkForContentTypeBeforeSending(response, { message: "Book Doesn't Exist" })
     }
@@ -55,8 +44,26 @@ export function getUserAppropriateChapter(
     }
 }
 
+async function sendChapterContents(response: Response, user: User | null | undefined, book: Books, chapter: string, cachedChapter: ChapterContentsCache) {
+    if (cachedChapter) {
+        checkForContentTypeBeforeSending(response, {
+            ...cachedChapter,
+            ...getUserAppropriateChapter(user, cachedChapter.chapterContents, cachedChapter.navigation, cachedChapter.info)
+        })
+    } else {
+        const [{ chaptercontents }] = await getChapterFromDB(book, chapter)
+
+        const populatedChapter = populateChapterContents(book, +chapter, chaptercontents)
+
+        checkForContentTypeBeforeSending(response, {
+            ...populatedChapter,
+            ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)
+        })
+    }
+}
+
 function getChapterContents(user: User | null | undefined, chapterContents: ChapterContents | LockedChapterContents) {
-    const isDeluxeUser = user?.patreon && user?.patreon > 0
+    const isDeluxeUser = user?.patreon && user?.patreon >= 3
 
     if (isDeluxeUser && !Array.isArray(chapterContents)) {
         return chapterContents.deluxe
@@ -68,7 +75,7 @@ function getChapterContents(user: User | null | undefined, chapterContents: Chap
 }
 
 function getChapterNavigation(user: User | null | undefined, navigation: ChapterNavigation[] | LockedNavigation) {
-    const isDeluxeUser = user?.patreon && user?.patreon > 0
+    const isDeluxeUser = user?.patreon && user?.patreon >=3
 
     if (isDeluxeUser && !Array.isArray(navigation)) {
         return navigation.deluxe
