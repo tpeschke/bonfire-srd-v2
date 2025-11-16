@@ -21,6 +21,14 @@
     display: flex;
 }
 
+.header-shell .title-shell span {
+    display: flex;
+}
+
+.header-shell .title-shell span h1:first-child {
+    margin-right: 5px;
+}
+
 .header-shell .title-shell h1 {
     font-size: 28px;
 }

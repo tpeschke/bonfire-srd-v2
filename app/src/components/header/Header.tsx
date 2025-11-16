@@ -42,7 +42,10 @@ export default function Header({ pathname }: Props) {
                 <img src={logo} />
                 <Link to={'/'}>
                     <div className='title-shell'>
-                        <h1>Bonfire SRD</h1>
+                        <span>
+                            <h1>Bonfire</h1>
+                            <h1> SRD</h1>
+                        </span>
                         {readyToGo && <p>{getSubtitle()}</p>}
                     </div>
                 </Link>
