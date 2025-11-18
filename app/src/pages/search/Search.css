@@ -34,6 +34,7 @@
 
 .search-quote strong.highlight {
     background: yellow;
+    color: black;
     font-family: unset;
     font-size: unset;
 }

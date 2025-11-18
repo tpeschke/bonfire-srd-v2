@@ -32,7 +32,7 @@ export default function Search({ setLoading, pathname }: Props) {
     useEffect(() => {
         if (setLoading) {
             document.title = "Bonfire SRD"
-            
+
             setLoading(false)
 
             if (timeoutID) { clearTimeout(timeoutID) }
@@ -48,7 +48,7 @@ export default function Search({ setLoading, pathname }: Props) {
                     setLoading(true)
                 })
             }, 1000)
-            
+
             setTimeoutID(newTimeoutID)
         }
     }, [pathname])
@@ -59,14 +59,19 @@ export default function Search({ setLoading, pathname }: Props) {
             {searchResults.map(({ book, chapter, excerpt }, index) => {
                 const routePath = `/${book}/${chapter}`
 
+                const searchRegex = new RegExp(String.raw`(${decodeURI(searchTerm)})`, "gmi")
+                excerpt = `...${excerpt}...`
+                    .replaceAll(/(\[([^;]*)\]\(([^;]*)\))/gm, "$2")
+                    .replaceAll(searchRegex, "<strong class='highlight'>$1</strong>")
+
                 return (
                     <div className='search-result' key={index} onMouseEnter={_ => preloadChapter(routePath)}>
                         <Link to={routePath}>
                             <h2>{guideDictionary[book]} - Chapter {chapter}</h2>
                             <div className='search-quote'>
-                                <p>...</p>
-                                <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, [rehypeWrap, {selector: 'table', wrapper: 'div.responsive-table'}]]} >{excerpt.replaceAll(/(\[([^;]*)\]\(([^;]*)\))/gm, "$2").split(searchTerm).join(`<strong class='highlight'>${searchTerm}</strong>`)}</Markdown>
-                                <p>...</p>
+                                <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, [rehypeWrap, { selector: 'table', wrapper: 'div.responsive-table' }]]} >
+                                    {excerpt}
+                                </Markdown>
                             </div>
                         </Link>
                     </div>
