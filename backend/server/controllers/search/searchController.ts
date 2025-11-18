@@ -21,8 +21,10 @@ export async function searchByTerm(request: SearchRequest, response: Response) {
 }
 
 async function search(user: User | null | undefined, searchTerm: string) {
-    if (user?.patreon && user?.patreon > 0) {
+    if (user?.patreon && user?.patreon >= 3) {
         return await query(searchSQL.deluxe, searchTerm)
+    } else if (user?.patreon && user?.patreon >= 3) {
+        return await query(searchSQL.player, searchTerm)
     } else {
         return await query(searchSQL.free, searchTerm)
     }
