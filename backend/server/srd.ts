@@ -71,7 +71,7 @@ app.use(fakeAuth)
 app.use('/auth', authRoutesWithoutPassword(passport))
 app.use('/guides', guidesRoutes)
 app.use('/user', userRoutes)
-app.use('/search', searchRoutes)
+app.use('/searchByQuery', searchRoutes)
 app.use('/patreon', patreonRoutes)
 app.use('/characteristic', characteristicRoutes)
 
