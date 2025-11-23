@@ -11,6 +11,7 @@ export const weaponsRanged: EquipmentItem[] = [
     { item: 'Latchet Crossbow', size: 'M', complexity: 3, basePrice: 50 },
     { item: 'Longbow', size: 'L', complexity: 3, basePrice: 60 },
     { item: 'Molotov Cocktail', size: 'S', complexity: 2, basePrice: 15 },
+    { item: 'Plumbata', size: 'S', complexity: 2, basePrice: 10 },
     { item: 'Sling', size: 'S', complexity: 1, basePrice: 5 },
     { item: 'Throwing Axe', size: 'S', complexity: 2, basePrice: 12 },
     { item: 'Throwing Knife', size: 'S', complexity: 2, basePrice: 10 },

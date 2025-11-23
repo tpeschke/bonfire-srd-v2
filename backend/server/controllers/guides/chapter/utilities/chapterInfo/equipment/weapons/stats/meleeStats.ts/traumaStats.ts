@@ -21,6 +21,16 @@ export const traumaStats: MeleeWeaponStatObject[] = [
         bonus: true
     },
     {
+        name: 'Chain Flail',
+        size: 'L',
+        damage: '1d12!+8',
+        recovery: 23,
+        damageType: 'C',
+        parry: 0,
+        measure: 4.5,
+        bonus: true
+    },
+    {
         name: 'Club',
         size: 'M',
         damage: 'd10!',

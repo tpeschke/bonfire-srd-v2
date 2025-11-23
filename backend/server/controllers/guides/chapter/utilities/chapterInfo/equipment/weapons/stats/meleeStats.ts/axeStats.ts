@@ -21,9 +21,9 @@ export const axeStats: MeleeWeaponStatObject[] = [
     },
     {
         name: 'Dane Axe',
-        size: 'H',
+        size: 'L',
         damage: '6d6!',
-        recovery: 26,
+        recovery: 35,
         damageType: 'S',
         parry: 0,
         measure: 6.5,

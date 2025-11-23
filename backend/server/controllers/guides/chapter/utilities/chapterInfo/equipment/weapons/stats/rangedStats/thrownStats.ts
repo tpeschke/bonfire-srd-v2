@@ -12,6 +12,16 @@ export const thrownStats: RangedWeaponStatObject[] = [
         bonus: true
     },
     {
+        name: 'Plumbata',
+        size: 'S',
+        ri: 10,
+        damage: '1d6!',
+        recovery: 10,
+        damageType: 'S',
+        minRecovery: 3,
+        bonus: true
+    },
+    {
         name: 'Throwing Axe',
         size: 'S',
         ri: 15,
