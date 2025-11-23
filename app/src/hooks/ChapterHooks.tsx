@@ -74,24 +74,23 @@ export default function ChapterHook(pathname?: string): ChapterHookReturn {
 
     async function backgroundPreloadChapter() {
         const preloadOrder = [
-            'rules/6',
+            'rules/7',
             'players/6',
             'rules/3',
             'players/4',
             'players/8',
-            'players/10',
+            'players/9',
             'rules/2',
             'players/3',
             'players/5',
-            'rules/5',
+            'rules/6',
             'players/2',
             'rules/1',
             'rules/4',
             'players/7',
-            'rules/7',
-            'players/9',
+            'rules/8',
+            'rules/5',
             'players/1',
-            'players/11',
         ]
 
         let index = 0
