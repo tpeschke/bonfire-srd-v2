@@ -17,6 +17,7 @@ import { ToastContainer, Slide } from 'react-toastify'
 
 function App() {
   const [hasVisitedChapter, setHasVisitedChapter] = useState(false)
+  const [preloadAlreadyStarted, setPreloadAlreadyStarted] = useState(false)
 
   const { backgroundPreloadChapter } = ChapterHook()
   const { pathname, hash } = LocationHook()
@@ -33,16 +34,18 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (preloadAlreadyStarted) return
     if (userIsLoggedIn || (pathname.includes('rules') || pathname.includes('players') && !hasVisitedChapter)) {
       console.log('starting preload')
+      setPreloadAlreadyStarted(true)
       setHasVisitedChapter(true)
       backgroundPreloadChapter()
     }
   }, [userIsLoggedIn, pathname])
-  
+
   return (
     <div className='body'>
-      <Header pathname={pathname}/>
+      <Header pathname={pathname} />
       <div className='content-body-shell'>
         <ChapterNavigate />
         <AllRoutes pathname={pathname} hash={hash} />
