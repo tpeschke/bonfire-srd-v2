@@ -4,6 +4,7 @@ import './ChapterDisplay.css'
 import ChapterHook from '../../hooks/ChapterHooks'
 import ContentDisplay from './contentDisplay/ContentDisplay'
 import ContentNavigation from './contentNavigation/ContentNavigation'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
     setLoading?: SetLoadingFunction,
@@ -14,7 +15,13 @@ interface Props {
 export default function ChapterDisplay({ setLoading, pathname, hash }: Props) {
     const { chapter } = ChapterHook(pathname)
 
+    const navigate = useNavigate()
+
     useEffect(() => {
+        if (chapter?.message) {
+            navigate('/')
+        }
+
         if (setLoading) {
             setLoading(!!chapter)
         }

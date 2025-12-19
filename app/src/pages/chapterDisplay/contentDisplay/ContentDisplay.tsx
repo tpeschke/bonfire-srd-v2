@@ -22,7 +22,7 @@ interface Props {
     chapterInfo?: ChapterInfo
 }
 
-export default function ContentDisplay({ contents, pathname, chapterName, chapterNumber, book, chapterInfo }: Props) {
+export default function ContentDisplay({ contents = [], pathname, chapterName, chapterNumber, book, chapterInfo }: Props) {
     const navigate = useNavigate()
 
     useEffect(() => {

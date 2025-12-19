@@ -8,7 +8,7 @@ interface Props {
     pathname: string
 }
 
-export default function ContentNavigation({ navigation, pathname }: Props) {
+export default function ContentNavigation({ navigation = [], pathname }: Props) {
     const [currentNavigation, setCurrentNavigation] = useState<ChapterNavigation[] | null>(null)
     const [currentHeaderID, setCurrentHeaderID] = useState<string | null>(null)
 

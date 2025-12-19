@@ -29,6 +29,7 @@ interface ChapterContentsBase {
 }
 
 export interface ChapterContentsReturn extends ChapterContentsBase {
+    message?: string,
     chapterContents: ChapterContents
     navigation: ChapterNavigation[],
     info: ChapterInfo

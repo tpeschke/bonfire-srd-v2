@@ -6,7 +6,6 @@ import ChapterEdit from "../pages/chapterEdit/ChapterEdit";
 import OwnerAuth from "./auth/OwnerAuth";
 import Search from "../pages/search/Search";
 import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
-import PlayerAuth from "./auth/PlayersAuth";
 
 interface Props {
     pathname: string,
@@ -33,9 +32,9 @@ export default function AllRoutes({ pathname, hash }: Props) {
             } />
             <Route path="players">
                 <Route path=':chapterNumber' element={
-                    <PlayerAuth>
+                    <Loading>
                         <ChapterDisplay pathname={pathname} hash={hash} />
-                    </PlayerAuth>
+                    </Loading>
                 } />
                 <Route path=':chapterNumber/edit' element={
                     <OwnerAuth>
