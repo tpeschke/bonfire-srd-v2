@@ -81,6 +81,8 @@ i.active {
 @media (max-width: 426px) {
     .header-shell {
         flex-direction: column;
+        position: sticky;
+        top: -126px;
     }
 
     .header-shell>div:first-child {
@@ -92,7 +94,8 @@ i.active {
         width: 100%;
     }
 
-    .icon-shell .header-spacer, .header-shell i {
+    .icon-shell .header-spacer,
+    .header-shell i {
         margin: 0;
     }
 }
