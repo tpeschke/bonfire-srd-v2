@@ -24,3 +24,11 @@
     height: 100%;
     z-index: -1;
 }
+
+@media (max-width: 426px) {
+    .chapter-name-header-shell h1 {
+        background: #222222ad;
+        padding: 10px 0;
+        text-align: center;
+    }
+}

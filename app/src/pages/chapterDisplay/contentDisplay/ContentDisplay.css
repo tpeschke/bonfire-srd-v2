@@ -194,12 +194,7 @@ tbody tr:nth-child(even) {
     .content-display-body-shell {
         padding: 15px 5px
     }
-
-    .chapter-name-header-shell h1 {
-        text-shadow: -5px 0 #212, 0 5px #212, 5px 0 #212, 0 -5px #212;
-        text-align: center;
-    }
-
+    
     .content-display-body-shell img {
         margin: 0;
         float: unset;
