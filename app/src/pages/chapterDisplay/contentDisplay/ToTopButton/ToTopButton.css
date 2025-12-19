@@ -1,0 +1,26 @@
+.to-top-button-component {
+    display: none;
+}
+
+
+@media (max-width: 1025px) {
+    .to-top-button-component {
+        display: unset;
+        background: #b45f06;
+        color: white;
+        position: sticky;
+        bottom: 5px;
+        padding: 8px;
+        margin-left: calc(100% - 43px);
+        filter: drop-shadow(2px 2px 10px #000000);
+        transition: 0.6s;
+    }
+
+    .to-top-button-component i {
+        font-size: 30px;
+    }
+
+    .to-top-button-component:hover {
+        background: #222;
+    }
+}
