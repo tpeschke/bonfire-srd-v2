@@ -12,7 +12,8 @@
     "replace-common": "replace-in-file --configFile=replaceScripts/replace-common-syntax.json --verbose",
     "lint": "eslint .",
     "server": "npx tsx backend/server/srd.ts",
-    "host": "pm2 restart backend/server/dist/srd.js"
+    "restart-server": "pm2 restart backend/server/dist/srd.js",
+    "host": "git pull && npm run build && npm run restart-server"
   },
   "workspaces": [
     "app",
