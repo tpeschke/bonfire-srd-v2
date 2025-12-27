@@ -19,6 +19,7 @@ import rules5 from '../../../assets/images/chapterHeadings/rules5.png'
 import rules6 from '../../../assets/images/chapterHeadings/rules6.png'
 import rules7 from '../../../assets/images/chapterHeadings/rules7.png'
 import rules8 from '../../../assets/images/chapterHeadings/rules8.png'
+import rules9 from '../../../assets/images/chapterHeadings/rules9.png'
 
 import defaultImage from '../../../assets/images/chapterHeadings/default.png'
 
@@ -38,7 +39,8 @@ export default function ChapterName({ chapterName, chapterNumber, book }: Props)
             rules5,
             rules6,
             rules7,
-            rules8
+            rules8,
+            rules9
         ],
         players: [
             player1,
