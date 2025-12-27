@@ -1,12 +1,13 @@
 export const rulesChapters = [
+    'Player Principles & Types',
     'Basic Mechanics',
     'Confrontations',
     'Combat',
     'Challenges',
-    'Safehouses', // -
-    'The Divine', // +1
-    'The Weird', // +1
-    'Misc. Rules' // +1
+    'Safehouses', 
+    'The Divine', 
+    'The Weird', 
+    'Misc. Rules' 
 ]
 
 export const playerChapters = [
@@ -18,5 +19,5 @@ export const playerChapters = [
     'Skills',
     'Characteristics',
     'Equipment',
-    'Character Progression' // -1
+    'Character Progression' 
 ]
