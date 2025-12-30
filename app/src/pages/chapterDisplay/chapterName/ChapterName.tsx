@@ -21,6 +21,8 @@ import rules7 from '../../../assets/images/chapterHeadings/rules7.png'
 import rules8 from '../../../assets/images/chapterHeadings/rules8.png'
 import rules9 from '../../../assets/images/chapterHeadings/rules9.png'
 
+import gmDefault from '../../../assets/images/chapterHeadings/gm-default.png'
+
 import defaultImage from '../../../assets/images/chapterHeadings/default.png'
 
 interface Props {
@@ -30,6 +32,15 @@ interface Props {
 }
 
 export default function ChapterName({ chapterName, chapterNumber, book }: Props) {
+    return (
+        <div className='chapter-name-header-shell'>
+            <h1>{chapterName}</h1>
+            {getChapterImage(book, chapterNumber)}
+        </div>
+    )
+}
+
+function getChapterImage(book: Books | undefined, chapterNumber: number | undefined) {
     const imageDictionary = {
         rules: [
             rules1,
@@ -55,13 +66,11 @@ export default function ChapterName({ chapterName, chapterNumber, book }: Props)
         ]
     }
 
-    const noBookOrImage = !book || !chapterNumber
+    if (book === 'gms') {
+        return <img src={gmDefault} />
+    } else if (book && chapterNumber) {
+        return <img src={imageDictionary[book][chapterNumber - 1]} />
+    }
 
-    return (
-        <div className='chapter-name-header-shell'>
-            <h1>{chapterName}</h1>
-            {book && chapterNumber && <img src={imageDictionary[book][chapterNumber - 1]} />}
-            {noBookOrImage && <img src={defaultImage} />}
-        </div>
-    )
+    return <img src={defaultImage} />
 }

@@ -39,12 +39,10 @@ function getChapterForCache(book: Books) {
 }
 
 function getGMChapterForCache() {
-    Array(gameMasterChapters.length + 1).forEach(async (_, section) => {
-        const { chapters } = gameMasterChapters[section]
-
+    gameMasterChapters.forEach(async ({chapters}, section) => {
         chapters.forEach(async (_, index) => {
             const [{ chaptercontents }] = await getGMChapterFromDB(section, index + 1)
-            chapterCache.gms[section][index] = populateChapterContents('gms', gameMasterChapters, index + 1, chaptercontents)
+            chapterCache.gms[section][index] = populateChapterContents('gms', chapters, index + 1, chaptercontents)
         })
     })
 }

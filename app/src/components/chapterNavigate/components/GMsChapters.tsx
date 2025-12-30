@@ -14,16 +14,15 @@ export default function GMsChapters({ userCanViewGMG, preloadChapter, currentRou
     return (
         <>
             <h1 className="lower-heading">GameMasters' Guide</h1>
-            <Link onMouseEnter={_ => preloadChapter(routePath)} to={routePath} className={routePath === currentRoute ? 'active-route' : ''}><h2>0 GM Principles & Types</h2></Link>
             {gameMasterChapters.map((route, index) => {
-                return formatSection(route, index + 1, userCanViewGMG, preloadChapter, currentRoute)
+                return formatSection(route, index, userCanViewGMG, preloadChapter, currentRoute)
             })}
         </>
     )
 }
 
 interface Section {
-    section: string,
+    section?: string,
     chapters: string[]
 }
 
@@ -36,16 +35,7 @@ function formatSection(
 ) {
     return (
         <Fragment key={sectionNumber}>
-            {userCanViewGMG ? (
-                <h3>{sectionNumber} {section}</h3>
-            ) : (
-                <a href='https://www.patreon.com/c/bonfirerpg/membership' target='_blank'>
-                    <h3 data-tooltip-id="my-tooltip" data-tooltip-content="This section of the GMG is only for $5 and Up Patrons.">
-                        <i className="fa-solid fa-lock"></i>
-                        {sectionNumber} {section}
-                    </h3>
-                </a>
-            )}
+            {formatSectionHeader(section, sectionNumber, userCanViewGMG)}
             {chapters.map((chapter, index) => {
                 return formatChapter(
                     userCanViewGMG,
@@ -58,6 +48,23 @@ function formatSection(
             })}
         </Fragment>
     )
+}
+
+function formatSectionHeader(section: string | undefined, sectionNumber: number, userCanViewGMG: boolean) {
+    if (userCanViewGMG && section) {
+        return <h3>{sectionNumber} {section}</h3>
+    } else if (section) {
+        return (
+            <a href='https://www.patreon.com/c/bonfirerpg/membership' target='_blank'>
+                <h3 data-tooltip-id="my-tooltip" data-tooltip-content="This section of the GMG is only for $5 and Up Patrons.">
+                    <i className="fa-solid fa-lock"></i>
+                    {sectionNumber} {section}
+                </h3>
+            </a>
+        )
+    }
+
+    return <></>
 }
 
 function formatChapter(

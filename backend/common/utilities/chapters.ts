@@ -24,9 +24,14 @@ export const playerChapters = [
 
 export const gameMasterChapters = [
     {
+        chapters: [
+            'GM Principles & Types'
+        ]
+    },
+    {
         section: 'Prepping',
         chapters: [
-            'Tabletop Roleplaying Game Structure',
+            'Roleplaying Game Structure',
             'Brainstorming',
             'The Session',
             'The Adventure',
