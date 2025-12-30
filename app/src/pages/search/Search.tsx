@@ -25,8 +25,9 @@ export default function Search({ setLoading, pathname }: Props) {
     const { preloadChapter } = ChapterHook()
 
     const guideDictionary = {
-        rules: 'Rules Guide',
-        players: 'Players Guide'
+        rules: "Rules Guide",
+        players: "Players' Guide",
+        gms: "GameMasters' Guide"
     }
 
     useEffect(() => {
@@ -56,8 +57,8 @@ export default function Search({ setLoading, pathname }: Props) {
     return (
         <div className="search-shell">
             <h1>{searchResults.length} Results</h1>
-            {searchResults.map(({ book, chapter, excerpt }, index) => {
-                const routePath = `/${book}/${chapter}`
+            {searchResults.map(({ book, section, chapter, excerpt }, index) => {
+                const routePath = getRoute(book, section, chapter)
 
                 const searchRegex = new RegExp(String.raw`(${decodeURI(searchTerm)})`, "gmi")
                 excerpt = `...${excerpt}...`
@@ -67,7 +68,7 @@ export default function Search({ setLoading, pathname }: Props) {
                 return (
                     <div className='search-result' key={index} onMouseEnter={_ => preloadChapter(routePath)}>
                         <Link to={routePath}>
-                            <h2>{guideDictionary[book]} - Chapter {chapter}</h2>
+                            {formatName(guideDictionary[book], section, chapter)}
                             <div className='search-quote'>
                                 <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, [rehypeWrap, { selector: 'table', wrapper: 'div.responsive-table' }]]} >
                                     {excerpt}
@@ -79,4 +80,18 @@ export default function Search({ setLoading, pathname }: Props) {
             })}
         </div>
     )
+}
+
+function formatName(book: string, section: number | undefined, chapter: number) {
+    if (section || section === 0) {
+        return <h2>{book} - Section {section}, Chapter {chapter}</h2>
+    }
+    return <h2>{book} - Chapter {chapter}</h2>
+}
+
+function getRoute(book: string, section: number | undefined, chapter: number) {
+    if (section || section === 0) {
+        return `/${book}/${section}-${chapter}`
+    }
+    return `/${book}/${chapter}`
 }
