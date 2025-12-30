@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { SetLoadingFunction } from '../../components/loading/Loading'
 import './ChapterDisplay.css'
 import ChapterHook from '../../hooks/ChapterHooks'
@@ -38,9 +38,17 @@ export default function ChapterDisplay({ setLoading, pathname, hash }: Props) {
     }, [hash])
 
     function updateTab() {
-        const guide = chapter?.book === 'rules' ? 'R' : chapter?.book === 'players' ? 'P' : 'G'
-
-        document.title = `${guide}.${chapter?.chapter} ${chapter?.chapterName} - Bonfire`
+        if (chapter) {
+            const { book, section, chapter: chapterInfo, chapterName} = chapter
+            const guide = book === 'rules' ? 'R' : book === 'players' ? 'P' : 'G'
+            if (section || section === 0) {
+                document.title = `${guide}.${section}-${chapterInfo} ${chapterName} - Bonfire`
+            } else {
+                document.title = `${guide}.${chapter} ${chapterName} - Bonfire`
+            }
+        } else {
+            document.title = 'Bonfire SRD'
+        }
     }
 
     function scrollToCorrectPosition() {

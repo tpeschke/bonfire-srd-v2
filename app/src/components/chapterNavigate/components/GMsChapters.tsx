@@ -9,8 +9,6 @@ interface Props {
 }
 
 export default function GMsChapters({ userCanViewGMG, preloadChapter, currentRoute }: Props) {
-    const routePath = `/gms/0-1`
-
     return (
         <>
             <h1 className="lower-heading">GameMasters' Guide</h1>
