@@ -4,7 +4,7 @@ import chapterSQL from '../../../db/queries/chapter'
 import { checkForContentTypeBeforeSending } from "../../common/utilities/sendingFunctions"
 import { chapterCache } from "../cache/getCache"
 import { Books, ChapterContents, ChapterContentsCache, ChapterNavigation, LockedChapterContents, LockedNavigation } from '@srd/common/interfaces/chapterInterfaces/ChapterInterfaces'
-import { rulesChapters, playerChapters } from '@srd/common/utilities/chapters'
+import { rulesChapters, playerChapters, gameMasterChapters } from '@srd/common/utilities/chapters'
 import populateChapterContents from '../utilities/parseChapterContents'
 import { isOwner } from '../../user/ownerFunctions'
 
@@ -23,6 +23,13 @@ export async function getChapterWorkhorse(request: ChapterRequest, response: Res
     } else if (book === 'players') {
         if (user?.patreon && user?.patreon >= 1) {
             sendChapterContents(response, user, book, chapter, chapterCache[book][+chapter - 1])
+        } else {
+            checkForContentTypeBeforeSending(response, { message: "You Don't Have Permissions to View These Chapters" })
+        }
+    } else if (book === 'gms') {
+        if (user?.patreon && user?.patreon >= 5) {
+            const [section, subsection] = chapter.split('-')
+            sendChapterContents(response, user, book, chapter, chapterCache[book][+section][+subsection - 1])
         } else {
             checkForContentTypeBeforeSending(response, { message: "You Don't Have Permissions to View These Chapters" })
         }
@@ -51,9 +58,17 @@ async function sendChapterContents(response: Response, user: User | null | undef
             ...getUserAppropriateChapter(user, cachedChapter.chapterContents, cachedChapter.navigation, cachedChapter.info)
         })
     } else {
-        const [{ chaptercontents }] = await getChapterFromDB(book, chapter)
+        const guideChapterNameArray = book === 'rules' ? rulesChapters : book === 'players' ? playerChapters : gameMasterChapters
 
-        const populatedChapter = populateChapterContents(book, +chapter, chaptercontents)
+        let chapterContents;
+        if (book === 'gms') {
+            const [section, subsection] = chapter.split('-')
+            chapterContents = (await getGMChapterFromDB(+section, +subsection))[0].chaptercontents
+        } else {
+            chapterContents = (await getChapterFromDB(book, chapter))[0].chaptercontents
+        }
+
+        const populatedChapter = populateChapterContents(book, guideChapterNameArray, +chapter, chapterContents)
 
         checkForContentTypeBeforeSending(response, {
             ...populatedChapter,
@@ -75,7 +90,7 @@ function getChapterContents(user: User | null | undefined, chapterContents: Chap
 }
 
 function getChapterNavigation(user: User | null | undefined, navigation: ChapterNavigation[] | LockedNavigation) {
-    const isDeluxeUser = user?.patreon && user?.patreon >=3
+    const isDeluxeUser = user?.patreon && user?.patreon >= 3
 
     if (isDeluxeUser && !Array.isArray(navigation)) {
         return navigation.deluxe
@@ -95,6 +110,10 @@ function getInfo(user: User | null | undefined, info: any) {
 
 export async function getChapterFromDB(book: Books, chapter: string | number) {
     return await query(chapterSQL.getByBookAndChapter, [book, chapter])
+}
+
+export async function getGMChapterFromDB(section: number, chapter: number) {
+    return await query(chapterSQL.getByBookAndChapterAndSection, ['gms', section, chapter])
 }
 
 export async function getChapterForEdit(request: ChapterRequest, response: Response) {

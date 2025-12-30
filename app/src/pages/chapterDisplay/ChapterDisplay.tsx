@@ -38,7 +38,7 @@ export default function ChapterDisplay({ setLoading, pathname, hash }: Props) {
     }, [hash])
 
     function updateTab() {
-        const guide = chapter?.book === 'rules' ? 'R' : 'P'
+        const guide = chapter?.book === 'rules' ? 'R' : chapter?.book === 'players' ? 'P' : 'G'
 
         document.title = `${guide}.${chapter?.chapter} ${chapter?.chapterName} - Bonfire`
     }

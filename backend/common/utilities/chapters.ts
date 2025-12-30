@@ -4,10 +4,10 @@ export const rulesChapters = [
     'Confrontations',
     'Combat',
     'Challenges',
-    'Safehouses', 
-    'The Divine', 
-    'The Weird', 
-    'Misc. Rules' 
+    'Safehouses',
+    'The Divine',
+    'The Weird',
+    'Misc. Rules'
 ]
 
 export const playerChapters = [
@@ -19,5 +19,50 @@ export const playerChapters = [
     'Skills',
     'Characteristics',
     'Equipment',
-    'Character Progression' 
+    'Character Progression'
+]
+
+export const gameMasterChapters = [
+    {
+        section: 'Prepping',
+        chapters: [
+            'Tabletop Roleplaying Game Structure',
+            'Brainstorming',
+            'The Session',
+            'The Adventure',
+            'The Campaign',
+            'Troubleshooting',
+            'Running the Session'
+        ]
+    },
+    {
+        section: 'Creation Tools',
+        chapters: [
+            'Creating a Hex Map',
+            'Population a Hex Map',
+            'Creating a Starting Village',
+            'Mapping the Village',
+            'Creating a Mini-Dungeon',
+            'Creating a Dungeon Map',
+            'Creating Factions',
+            'Creating an NPC'
+        ]
+    },
+    {
+        section: 'Rewards',
+        chapters: [
+            'Overview',
+            'Creating Unique Items',
+            'Creating Enchanted Items',
+            'Example Mentors'
+        ]
+    },
+    {
+        section: 'Additional Tools',
+        chapters: [
+            'Travel, Weather, & Random Encounters',
+            'Organizing Notes',
+            'Other Tools & Resources'
+        ]
+    }
 ]

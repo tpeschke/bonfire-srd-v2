@@ -4,7 +4,7 @@ import kitInfo from "./chapterInfo/kits";
 import rudimentInfo from "./chapterInfo/weird";
 
 export default {
-    rules: [ ],
+    rules: [],
     players: [
         null,
         kitInfo,
@@ -14,5 +14,6 @@ export default {
         null,
         null,
         equipmentInfo
-    ]
+    ],
+    gms: []
 }

@@ -20,7 +20,7 @@ export interface ComponentContent extends ChapterContent {
     component: ValidComponents
 }
 
-export type Books = 'rules' | 'players'
+export type Books = 'rules' | 'players' | 'gms'
 
 interface ChapterContentsBase {
     book: Books,

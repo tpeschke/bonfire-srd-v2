@@ -1,7 +1,6 @@
 import { Books, ChapterContents, ChapterContentsCache, ComponentContent, LockedChapterContents, MarkdownContent, ValidComponents } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces";
 import chapterInfo from "../chapter/utilities/chapterInfo";
 import createNavigationArray from "./createNavigationArray";
-import { rulesChapters, playerChapters } from "@srd/common/utilities/chapters";
 
 const validComponentArray: ValidComponents[] = [
     'characteristicGenerator', 'kits', 'originsShapesTraditions', 'rudimentsByTradition', 'burdensNInjuries',
@@ -12,9 +11,7 @@ const validComponentArray: ValidComponents[] = [
     'weaponsSidearms', 'weaponsSwords', 'weaponsTrauma', 'weaponsRanged', 'ammunition', 'meleeWeaponStats', 'rangedWeaponStats'
 ]
 
-export default function populateChapterContents(book: Books, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {
-    const guideChapterNameArray = book === 'rules' ? rulesChapters : playerChapters
-
+export default function populateChapterContents(book: Books, guideChapterNameArray: any, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {
     const chapterContents = parseChapterContents(rawChapterContents)
 
     return {

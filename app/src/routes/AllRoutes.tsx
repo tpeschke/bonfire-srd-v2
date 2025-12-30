@@ -30,6 +30,18 @@ export default function AllRoutes({ pathname, hash }: Props) {
                     <Search pathname={pathname} />
                 </Loading>
             } />
+            <Route path="rules">
+                <Route path=':chapterNumber' element={
+                    <Loading>
+                        <ChapterDisplay pathname={pathname} hash={hash} />
+                    </Loading>
+                } />
+                <Route path=':chapterNumber/edit' element={
+                    <OwnerAuth>
+                        <ChapterEdit pathname={pathname} />
+                    </OwnerAuth>
+                } />
+            </Route>
             <Route path="players">
                 <Route path=':chapterNumber' element={
                     <Loading>
@@ -42,7 +54,7 @@ export default function AllRoutes({ pathname, hash }: Props) {
                     </OwnerAuth>
                 } />
             </Route>
-            <Route path="rules">
+            <Route path="gms">
                 <Route path=':chapterNumber' element={
                     <Loading>
                         <ChapterDisplay pathname={pathname} hash={hash} />

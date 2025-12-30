@@ -1,16 +1,20 @@
 import { Books, ChapterContentsCache } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces"
-import { rulesChapters, playerChapters } from "@srd/common/utilities/chapters"
-import { getChapterFromDB } from "../chapter/getChapter"
+import { rulesChapters, playerChapters, gameMasterChapters } from "@srd/common/utilities/chapters"
+import { getChapterFromDB, getGMChapterFromDB } from "../chapter/getChapter"
 import populateChapterContents from "../utilities/parseChapterContents"
 
 interface ChapterCache {
     rules: ChapterContentsCache[],
-    players: ChapterContentsCache[]
+    players: ChapterContentsCache[],
+    gms: ChapterContentsCache[][],
 }
 
 export let chapterCache: ChapterCache = {
     rules: [],
-    players: []
+    players: [],
+    gms: [
+        [], [], [], [], []
+    ]
 }
 
 export function populateChapterCacheWorkhorse() {
@@ -19,12 +23,29 @@ export function populateChapterCacheWorkhorse() {
 
     playerChapters.forEach(getChapterForCache('players'))
     console.log("Players Guide Collected")
+
+    getGMChapterForCache()
+    console.log("GameMasters Guide Collected")
 }
 
 function getChapterForCache(book: Books) {
-    return async (_: string, index: number) => {
-        const [{ chaptercontents }] = await getChapterFromDB(book, index + 1)
+    const guideChapterNameArray = book === 'rules' ? rulesChapters : playerChapters
 
-        chapterCache[book][index] = populateChapterContents(book, index + 1, chaptercontents)
+    return async (_: string, index: number) => {
+        const [{ chapterContents }] = await getChapterFromDB(book, index + 1)
+
+        chapterCache[book][index] = populateChapterContents(book, guideChapterNameArray, index + 1, chapterContents)
     }
+}
+
+function getGMChapterForCache() {
+    Array(gameMasterChapters.length + 1).forEach(async (_, section) => {
+        const { chapters } = gameMasterChapters[section]
+
+        chapters.forEach(async (_, index) => {
+            const [{ chapterContents }] = await getGMChapterFromDB(section, index + 1)
+            chapterCache.gms[section][index] = populateChapterContents('gms', gameMasterChapters, index + 1, chapterContents)
+        })
+
+    })
 }

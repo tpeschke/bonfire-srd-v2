@@ -8,6 +8,7 @@ import updateCache from '../cache/updateCache'
 import populateChapterContents from '../utilities/parseChapterContents'
 import { getUserAppropriateChapter } from './getChapter'
 import { updateSearch } from '../../search/searchController'
+import { rulesChapters, playerChapters, gameMasterChapters } from '@srd/common/utilities/chapters'
 
 interface ChapterRequest extends Request {
     params: {
@@ -23,13 +24,13 @@ export default async function updateChapter(request: ChapterRequest, response: R
     
     if (checkIfOwner(user, response)) {
         const [book, chapter] = request.params.code.split('.')
-        const chapterNumber = +chapter
         const { chapterContents } = request.body
 
         if (book === 'rules' || book === 'players') {
-            await query(chapterSQL.updateChapter, [chapterContents, book, chapterNumber])
-    
-            const newChapter: ChapterContentsCache = populateChapterContents(book, +chapter, chapterContents)
+            await query(chapterSQL.updateChapter, [chapterContents, book, +chapter])
+
+            const guideChapterNameArray = book === 'rules' ? rulesChapters : playerChapters
+            const newChapter: ChapterContentsCache = populateChapterContents(book, guideChapterNameArray, +chapter, chapterContents)
 
             updateSearch(newChapter)
             updateCache(newChapter)
@@ -38,6 +39,16 @@ export default async function updateChapter(request: ChapterRequest, response: R
                 ...newChapter,
                 ...getUserAppropriateChapter(user, newChapter.chapterContents, newChapter.navigation, newChapter.info)
             })
+        } else if (book === 'gms') {
+            const [section, subsection] = chapter.split('-')
+            await query(chapterSQL.updateChapterWithSection, [chapterContents, book, +section, +subsection])
+
+            const newChapter: ChapterContentsCache = populateChapterContents(book, gameMasterChapters[+section], +chapter, chapterContents)
+
+            // update search
+            // update cache
+
+            // send info
         }
 
         checkForContentTypeBeforeSending(response, { message: "Book Doesn't Exist" })
