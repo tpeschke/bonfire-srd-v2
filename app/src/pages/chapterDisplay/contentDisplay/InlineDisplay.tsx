@@ -75,6 +75,18 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/qtZCgos.png' goran={false} removeFloat={true} />
         case 'popHexExample6':
             return <Image src='https://i.imgur.com/EoKGuUu.png' goran={false} removeFloat={true} />
+        case 'villageMap1':
+            return <Image src='https://i.imgur.com/D8OlzHO.png' goran={false} removeFloat={true} />
+        case 'villageMap2.1':
+            return <Image src='https://i.imgur.com/Kq2KesU.png' goran={false} removeFloat={true} />
+        case 'villageMap2.2':
+            return <Image src='https://i.imgur.com/8cgD9WV.png' goran={false} removeFloat={true} />
+        case 'villageMap3.1':
+            return <Image src='https://i.imgur.com/4clnE36.png' goran={false} removeFloat={true} />
+        case 'villageMap3.2':
+            return <Image src='https://i.imgur.com/h3jpImy.png' goran={false} removeFloat={true} />
+        case 'villageMapFinal':
+            return <Image src='https://i.imgur.com/6Q3BbOg.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

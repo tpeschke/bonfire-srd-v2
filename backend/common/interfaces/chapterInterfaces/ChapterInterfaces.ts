@@ -13,11 +13,13 @@ type AncestryImages = 'dwarfImage' | 'elfImage' | 'humanImage' | 'orcImage' | 'p
 
 type ClassImages = 'expertImage' | 'fighterImage' | 'servantImage' | 'socialiteImage' | 'weirdAdeptImage'
 
-type GMImages = 'structureImage' | createHexCrawlImages | popHexCrawlImages
+type GMImages = 'structureImage' | createHexCrawlImages | popHexCrawlImages | villageMapImages
 
 type createHexCrawlImages = 'createHexExample1' | 'createHexExample2' | 'createHexExample3.1' | 'createHexExample3.2' | 'createHexExample4' | 'createHexExample5' | 'createHexExampleFinal'
 
 type popHexCrawlImages = 'popHexExample1' | 'popHexExample2' | 'popHexExample3' | 'popHexExample4' | 'popHexExample5' | 'popHexExample6'
+
+type villageMapImages = 'villageMap1' | 'villageMap2.1' | 'villageMap2.2' | 'villageMap3.1' | 'villageMap3.2' | 'villageMapFinal'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 
