@@ -63,6 +63,18 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/h1B7Cex.png' goran={false} removeFloat={true} />
         case 'createHexExampleFinal':
             return <Image src='https://i.imgur.com/gtxoVYJ.png' goran={false} removeFloat={true} />
+        case 'popHexExample1':
+            return <Image src='https://i.imgur.com/uszC0QF.png' goran={false} removeFloat={true} />
+        case 'popHexExample2':
+            return <Image src='https://i.imgur.com/8KSMcLB.png' goran={false} removeFloat={true} />
+        case 'popHexExample3':
+            return <Image src='https://i.imgur.com/75zIToZ.png' goran={false} removeFloat={true} />
+        case 'popHexExample4':
+            return <Image src='https://i.imgur.com/Nxt5fBt.png' goran={false} removeFloat={true} />
+        case 'popHexExample5':
+            return <Image src='https://i.imgur.com/qtZCgos.png' goran={false} removeFloat={true} />
+        case 'popHexExample6':
+            return <Image src='https://i.imgur.com/EoKGuUu.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':
