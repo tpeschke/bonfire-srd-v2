@@ -58,22 +58,29 @@ async function sendChapterContents(response: Response, user: User | null | undef
             ...getUserAppropriateChapter(user, cachedChapter.chapterContents, cachedChapter.navigation, cachedChapter.info)
         })
     } else {
-        const guideChapterNameArray = book === 'rules' ? rulesChapters : book === 'players' ? playerChapters : gameMasterChapters
-
+        let guideChapterNameArray: string[] = playerChapters;
         let chapterContents;
+
         if (book === 'gms') {
             const [section, subsection] = chapter.split('-')
             chapterContents = (await getGMChapterFromDB(+section, +subsection))[0].chaptercontents
+            guideChapterNameArray = gameMasterChapters[+section].chapters
+
+            const populatedChapter = populateChapterContents(book, guideChapterNameArray, +section, +subsection, chapterContents)
+            checkForContentTypeBeforeSending(response, {
+                ...populatedChapter,
+                ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)
+            })
         } else {
+            book === 'rules' ? rulesChapters : playerChapters
             chapterContents = (await getChapterFromDB(book, chapter))[0].chaptercontents
+
+            const populatedChapter = populateChapterContents(book, guideChapterNameArray, undefined, +chapter, chapterContents)
+            checkForContentTypeBeforeSending(response, {
+                ...populatedChapter,
+                ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)
+            })
         }
-
-        const populatedChapter = populateChapterContents(book, guideChapterNameArray, +chapter, chapterContents)
-
-        checkForContentTypeBeforeSending(response, {
-            ...populatedChapter,
-            ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)
-        })
     }
 }
 
@@ -130,6 +137,16 @@ export async function getChapterForEdit(request: ChapterRequest, response: Respo
                 book,
                 chapterContents: chaptercontents,
                 chapterName: guideChapterNameArray[+chapter - 1],
+                chapter: chapter
+            })
+        } else if (book === 'gms') {
+            const [section, subsection] = chapter.split('-')
+            const [{ chaptercontents }] = await getGMChapterFromDB(+section, +subsection)
+
+            checkForContentTypeBeforeSending(response, {
+                book,
+                chapterContents: chaptercontents,
+                chapterName: gameMasterChapters[+section].chapters[+subsection - 1],
                 chapter: chapter
             })
         }

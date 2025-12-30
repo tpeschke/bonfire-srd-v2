@@ -24,6 +24,7 @@ export type Books = 'rules' | 'players' | 'gms'
 
 interface ChapterContentsBase {
     book: Books,
+    section?: number,
     chapter: number,
     chapterName: string
 }

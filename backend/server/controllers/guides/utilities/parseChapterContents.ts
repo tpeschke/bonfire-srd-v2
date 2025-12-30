@@ -11,13 +11,14 @@ const validComponentArray: ValidComponents[] = [
     'weaponsSidearms', 'weaponsSwords', 'weaponsTrauma', 'weaponsRanged', 'ammunition', 'meleeWeaponStats', 'rangedWeaponStats'
 ]
 
-export default function populateChapterContents(book: Books, guideChapterNameArray: any, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {
+export default function populateChapterContents(book: Books, guideChapterNameArray: any, sectionNumber: number | undefined, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {
     const chapterContents = parseChapterContents(rawChapterContents)
 
     return {
         book, chapterContents,
         chapterName: guideChapterNameArray[chapterNumber - 1],
         info: chapterInfo[book][chapterNumber - 1],
+        section: sectionNumber,
         chapter: chapterNumber,
         navigation: createNavigationArray(chapterContents),
     }

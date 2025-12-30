@@ -31,15 +31,27 @@ async function search(user: User | null | undefined, searchTerm: string) {
 }
 
 export async function updateSearch(chapterInfo: ChapterContentsCache) {
-    const { chapterContents, book, chapter } = chapterInfo
+    const { chapterContents, book, section, chapter } = chapterInfo
 
+    // Because this confused me when I came back to it:
+    // Some chapters have a free and deluxe version: some don't. The if statement handles that difference
     if (Array.isArray(chapterContents)) {
         const stringifiedContents = stringifyContents(chapterContents, chapter, true)
-        await query(searchSQL.updateFree, [stringifiedContents, book, chapter])
-        await query(searchSQL.updateDeluxe, [stringifiedContents, book, chapter])
+        if (section || section === 0) {
+            await query(searchSQL.updateFreeWithSection, [stringifiedContents, book, section, chapter])
+            await query(searchSQL.updateDeluxeWithSection, [stringifiedContents, book, section, chapter])
+        } else {
+            await query(searchSQL.updateFree, [stringifiedContents, book, chapter])
+            await query(searchSQL.updateDeluxe, [stringifiedContents, book, chapter])
+        }
     } else {
-        await query(searchSQL.updateFree, [stringifyContents(chapterContents.free, chapter, true), book, chapter])
-        await query(searchSQL.updateDeluxe, [stringifyContents(chapterContents.deluxe, chapter, false), book, chapter])
+        if (section || section === 0) {
+            await query(searchSQL.updateFreeWithSection, [stringifyContents(chapterContents.free, chapter, true), book, chapter])
+            await query(searchSQL.updateDeluxeWithSection, [stringifyContents(chapterContents.deluxe, chapter, false), book, chapter])
+        } else {
+            await query(searchSQL.updateFree, [stringifyContents(chapterContents.free, chapter, true), book, chapter])
+            await query(searchSQL.updateDeluxe, [stringifyContents(chapterContents.deluxe, chapter, false), book, chapter])
+        }
     }
 }
 

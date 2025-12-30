@@ -21,7 +21,7 @@ interface ChapterRequest extends Request {
 
 export default async function updateChapter(request: ChapterRequest, response: Response) {
     const { user } = request
-    
+
     if (checkIfOwner(user, response)) {
         const [book, chapter] = request.params.code.split('.')
         const { chapterContents } = request.body
@@ -30,11 +30,11 @@ export default async function updateChapter(request: ChapterRequest, response: R
             await query(chapterSQL.updateChapter, [chapterContents, book, +chapter])
 
             const guideChapterNameArray = book === 'rules' ? rulesChapters : playerChapters
-            const newChapter: ChapterContentsCache = populateChapterContents(book, guideChapterNameArray, +chapter, chapterContents)
+            const newChapter: ChapterContentsCache = populateChapterContents(book, guideChapterNameArray, undefined, +chapter, chapterContents)
 
             updateSearch(newChapter)
             updateCache(newChapter)
-    
+
             checkForContentTypeBeforeSending(response, {
                 ...newChapter,
                 ...getUserAppropriateChapter(user, newChapter.chapterContents, newChapter.navigation, newChapter.info)
@@ -43,12 +43,15 @@ export default async function updateChapter(request: ChapterRequest, response: R
             const [section, subsection] = chapter.split('-')
             await query(chapterSQL.updateChapterWithSection, [chapterContents, book, +section, +subsection])
 
-            const newChapter: ChapterContentsCache = populateChapterContents(book, gameMasterChapters[+section], +chapter, chapterContents)
+            const newChapter: ChapterContentsCache = populateChapterContents(book, gameMasterChapters[+section], +section, +subsection, chapterContents)
 
-            // update search
-            // update cache
+            updateSearch(newChapter)
+            updateCache(newChapter)
 
-            // send info
+            checkForContentTypeBeforeSending(response, {
+                ...newChapter,
+                ...getUserAppropriateChapter(user, newChapter.chapterContents, newChapter.navigation, newChapter.info)
+            })
         }
 
         checkForContentTypeBeforeSending(response, { message: "Book Doesn't Exist" })
