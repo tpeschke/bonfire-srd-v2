@@ -48,7 +48,21 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'weirdAdeptImage':
             return <Image isClass={true} src='https://i.imgur.com/sa2dkYn.png' />
         case 'structureImage':
-            return <Image src='https://i.imgur.com/O3mZArK.jpeg' />
+            return <Image src='https://i.imgur.com/O3mZArK.jpeg' goran={false} removeFloat={true} />
+        case 'createHexExample1':
+            return <Image src='https://i.imgur.com/8dlKoXh.png' goran={false} removeFloat={true} />
+        case 'createHexExample2':
+            return <Image src='https://i.imgur.com/rWMpZLb.png' goran={false} removeFloat={true} />
+        case 'createHexExample3.1':
+            return <Image src='https://i.imgur.com/hWjJIHm.png' goran={false} removeFloat={true} />
+        case 'createHexExample3.2':
+            return <Image src='https://i.imgur.com/nt7awKY.png' goran={false} removeFloat={true} />
+        case 'createHexExample4':
+            return <Image src='https://i.imgur.com/3dUnypq.png' goran={false} removeFloat={true} />
+        case 'createHexExample5':
+            return <Image src='https://i.imgur.com/h1B7Cex.png' goran={false} removeFloat={true} />
+        case 'createHexExampleFinal':
+            return <Image src='https://i.imgur.com/gtxoVYJ.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':
@@ -116,6 +130,6 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'rangedWeaponStats':
             return <RangedWeaponStats rangedWeaponStats={chapterInfo ? chapterInfo.info[0].rangedWeaponStats : []} />
         default:
-            return <div className="component-shell"><p>Something Went Wrong</p></div>
+            return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }
 }

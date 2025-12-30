@@ -1,16 +1,6 @@
-import { Books, ChapterContents, ChapterContentsCache, ComponentContent, LockedChapterContents, MarkdownContent, ValidComponents } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces";
+import { Books, ChapterContents, ChapterContentsCache, ComponentContent, LockedChapterContents, MarkdownContent } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces";
 import chapterInfo from "../chapter/utilities/chapterInfo";
 import createNavigationArray from "./createNavigationArray";
-
-const validComponentArray: ValidComponents[] = [
-    'characteristicGenerator', 'kits', 'originsShapesTraditions', 'rudimentsByTradition', 'burdensNInjuries',
-    'dwarfImage', 'elfImage', 'humanImage', 'orcImage', 'pechImage', 'ratfolkImage', 'gauntImage', 'starCursedImage',
-    'expertImage', 'fighterImage', 'servantImage', 'socialiteImage', 'weirdAdeptImage',
-    'priceByDistance', 'animalLivestock', 'animalMounts', 'animalBarding', 'animalFeed', 'armorPrices', 'armorStats', 'beverages', 'clothing', 'clothingAccessories', 'containersHeavy',
-    'containersPersonal', 'musicalInstruments', 'poisonsNToxins', 'rope', 'shields', 'shieldStats', 'toolsAdventuring', 'toolsGeneral', 'toolsTrade', 'weaponsAxes', 'weaponsPolearms',
-    'weaponsSidearms', 'weaponsSwords', 'weaponsTrauma', 'weaponsRanged', 'ammunition', 'meleeWeaponStats', 'rangedWeaponStats',
-    'structureImage'
-]
 
 export default function populateChapterContents(book: Books, guideChapterNameArray: any, sectionNumber: number | undefined, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {
     const chapterContents = parseChapterContents(rawChapterContents)
@@ -101,7 +91,7 @@ function parseChapterContents(rawChapterContents: string): ChapterContents | Loc
 }
 
 function returnProperComponentType(trackedString: any): MarkdownContent | ComponentContent {
-    if (validComponentArray.includes(trackedString)) {
+    if (trackedString.indexOf(' ') === -1 && trackedString.indexOf('\n') === -1 && ( trackedString !== 'deluxe' || trackedString !== 'free')) {
         return {
             type: 'component',
             component: trackedString

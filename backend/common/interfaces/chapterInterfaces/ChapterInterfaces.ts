@@ -13,7 +13,9 @@ type AncestryImages = 'dwarfImage' | 'elfImage' | 'humanImage' | 'orcImage' | 'p
 
 type ClassImages = 'expertImage' | 'fighterImage' | 'servantImage' | 'socialiteImage' | 'weirdAdeptImage'
 
-type GMImages = 'structureImage'
+type GMImages = 'structureImage' | createHexCrawlImage
+
+type createHexCrawlImage = 'createHexExample1' | 'createHexExample2' | 'createHexExample3.1' | 'createHexExample3.2' | 'createHexExample4' | 'createHexExample5' | 'createHexExampleFinal'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 

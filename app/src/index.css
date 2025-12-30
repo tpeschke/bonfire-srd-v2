@@ -178,6 +178,10 @@ a:hover, .fake-link:hover {
 	border-left: 1px solid gray;
 }
 
+.bottom-border-gray {
+	border-bottom: 1px solid gray;
+}
+
 .react-tooltip {
 	z-index: 2;
 }
