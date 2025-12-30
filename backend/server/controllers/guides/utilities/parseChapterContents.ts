@@ -8,7 +8,8 @@ const validComponentArray: ValidComponents[] = [
     'expertImage', 'fighterImage', 'servantImage', 'socialiteImage', 'weirdAdeptImage',
     'priceByDistance', 'animalLivestock', 'animalMounts', 'animalBarding', 'animalFeed', 'armorPrices', 'armorStats', 'beverages', 'clothing', 'clothingAccessories', 'containersHeavy',
     'containersPersonal', 'musicalInstruments', 'poisonsNToxins', 'rope', 'shields', 'shieldStats', 'toolsAdventuring', 'toolsGeneral', 'toolsTrade', 'weaponsAxes', 'weaponsPolearms',
-    'weaponsSidearms', 'weaponsSwords', 'weaponsTrauma', 'weaponsRanged', 'ammunition', 'meleeWeaponStats', 'rangedWeaponStats'
+    'weaponsSidearms', 'weaponsSwords', 'weaponsTrauma', 'weaponsRanged', 'ammunition', 'meleeWeaponStats', 'rangedWeaponStats',
+    'structureImage'
 ]
 
 export default function populateChapterContents(book: Books, guideChapterNameArray: any, sectionNumber: number | undefined, chapterNumber: number, rawChapterContents: string): ChapterContentsCache {

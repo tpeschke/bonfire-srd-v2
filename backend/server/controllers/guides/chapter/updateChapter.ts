@@ -43,7 +43,7 @@ export default async function updateChapter(request: ChapterRequest, response: R
             const [section, subsection] = chapter.split('-')
             await query(chapterSQL.updateChapterWithSection, [chapterContents, book, +section, +subsection])
 
-            const newChapter: ChapterContentsCache = populateChapterContents(book, gameMasterChapters[+section], +section, +subsection, chapterContents)
+            const newChapter: ChapterContentsCache = populateChapterContents(book, gameMasterChapters[+section].chapters, +section, +subsection, chapterContents)
 
             updateSearch(newChapter)
             updateCache(newChapter)

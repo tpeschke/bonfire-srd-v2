@@ -47,6 +47,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image isClass={true} src='https://i.imgur.com/YH1ELml.png' />
         case 'weirdAdeptImage':
             return <Image isClass={true} src='https://i.imgur.com/sa2dkYn.png' />
+        case 'structureImage':
+            return <Image src='https://i.imgur.com/O3mZArK.jpeg' />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':
