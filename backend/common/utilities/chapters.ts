@@ -56,7 +56,7 @@ export const gameMasterChapters = [
     {
         section: 'Rewards',
         chapters: [
-            'Overview',
+            'Rewards Overview',
             'Creating Unique Items',
             'Creating Enchanted Items',
             'Example Mentors'
