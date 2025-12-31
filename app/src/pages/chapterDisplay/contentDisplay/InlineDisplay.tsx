@@ -87,6 +87,54 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/h3jpImy.png' goran={false} removeFloat={true} />
         case 'villageMapFinal':
             return <Image src='https://i.imgur.com/6Q3BbOg.png' goran={false} removeFloat={true} />
+        case 'wizardTowerMapImage':
+            return <Image src='https://i.imgur.com/6KGriCk.png' goran={false} removeFloat={true} />
+        case 'roomExampleMap':
+            return <Image src='https://i.imgur.com/26bJueI.png' goran={false} />
+        case 'lockAndKeyExplanation':
+            return <Image src='https://i.imgur.com/aKlRR1S.png' goran={false} unsetWidth={true} />
+        case '1to1Variants':
+            return <Image src='https://i.imgur.com/lEog7JZ.png' goran={false} removeFloat={true} />
+        case '1toManyVariants':
+            return <Image src='https://i.imgur.com/nn3yKsn.png' goran={false} removeFloat={true} />
+        case '1WayVariants':
+            return <Image src='https://i.imgur.com/CVXqh3S.png' goran={false} removeFloat={true} />
+        case 'ManyTo1Variants':
+            return <Image src='https://i.imgur.com/f92zxSo.png' goran={false} removeFloat={true} />
+        case 'OrSwitchVariants':
+            return <Image src='https://i.imgur.com/PnXpuBF.png' goran={false} removeFloat={true} />
+        case 'prereqVariants':
+            return <Image src='https://i.imgur.com/IiVk9Vt.png' goran={false} removeFloat={true} />
+        case 'singleToManyVariants':
+            return <Image src='https://i.imgur.com/xnjPe4H.png' goran={false} removeFloat={true} />
+        case 'step2Example':
+            return <Image src='https://i.imgur.com/YpAaJm5.png' goran={false} unsetWidth={true} />
+        case 'step4Example1':
+            return <Image src='https://i.imgur.com/rxp0Mgi.png' goran={false} unsetWidth={true} />
+        case 'step4Example2':
+            return <Image src='https://i.imgur.com/hY6YMnd.png' goran={false} removeFloat={true} />
+        case 'step4Example3':
+            return <Image src='https://i.imgur.com/51jFIdr.png' goran={false} removeFloat={true} />
+        case 'step4Example4':
+            return <Image src='https://i.imgur.com/0kTYVDp.png' goran={false} removeFloat={true} />
+        case 'step4Example5':
+            return <Image src='https://i.imgur.com/7rAafMP.png' goran={false} removeFloat={true} />
+        case 'step4Example6':
+            return <Image src='https://i.imgur.com/hLsPWyT.png' goran={false} unsetWidth={true} />
+        case 'step4Example7':
+            return <Image src='https://i.imgur.com/xdvY91d.png' goran={false} removeFloat={true} />
+        case 'step5Example1':
+            return <Image src='https://i.imgur.com/eHbnw2Q.png' goran={false} removeFloat={true} />
+        case 'step5Example2':
+            return <Image src='https://i.imgur.com/3axMkid.png' goran={false} removeFloat={true} />
+        case 'step5Example3':
+            return <Image src='https://i.imgur.com/XtS0lSg.png' goran={false} removeFloat={true} />
+        case 'step5Example4':
+            return <Image src='https://i.imgur.com/HSJHoyP.png' goran={false} removeFloat={true} />
+        case 'step5Example5':
+            return <Image src='https://i.imgur.com/nofVwuc.png' goran={false} removeFloat={true} />
+        case 'step5ExampleFinal':
+            return <Image src='https://i.imgur.com/88CSkjN.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

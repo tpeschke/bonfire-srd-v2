@@ -4,11 +4,12 @@ interface Props {
     src: string,
     isClass?: boolean,
     goran?: boolean,
-    removeFloat?: boolean
+    removeFloat?: boolean,
+    unsetWidth?: boolean
 }
 
-export default function Image({ src, isClass = false, goran = true, removeFloat = false }: Props) {
-    const cssClass = `${isClass ? 'class-image' : ''} ${removeFloat ? 'remove-float' : ''}`
+export default function Image({ src, isClass = false, goran = true, removeFloat = false, unsetWidth = false }: Props) {
+    const cssClass = `${isClass ? 'class-image' : ''} ${removeFloat ? 'remove-float' : ''} ${unsetWidth ? 'unset-width' : ''}`
 
     if (goran) {
         return (

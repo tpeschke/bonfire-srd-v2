@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+.content-display-body-shell img.unset-width {
+    width: unset;
+}
+
 @media (max-width: 426px) {
     .content-display-body-shell img.class-image {
         height: 100%;
