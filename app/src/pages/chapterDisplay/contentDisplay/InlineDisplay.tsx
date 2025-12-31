@@ -135,6 +135,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/nofVwuc.png' goran={false} removeFloat={true} />
         case 'step5ExampleFinal':
             return <Image src='https://i.imgur.com/88CSkjN.png' goran={false} removeFloat={true} />
+        case 'relationshipChart':
+            return <Image src='https://i.imgur.com/s2NN4w3.jpeg' goran={false} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

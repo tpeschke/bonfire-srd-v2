@@ -7,7 +7,7 @@ export interface MarkdownContent extends ChapterContent {
     body: string
 }
 
-export type ValidComponents = 'characteristicGenerator' | 'kits' | 'originsShapesTraditions' | 'rudimentsByTradition' | 'burdensNInjuries' | AncestryImages | ClassImages | EquipmentTables | GMImages
+export type ValidComponents = 'characteristicGenerator' | 'kits' | 'originsShapesTraditions' | 'rudimentsByTradition' | 'burdensNInjuries' | 'relationshipChart' | AncestryImages | ClassImages | EquipmentTables | GMImages
 
 type AncestryImages = 'dwarfImage' | 'elfImage' | 'humanImage' | 'orcImage' | 'pechImage' | 'ratfolkImage' | 'gauntImage' | 'starCursedImage'
 
