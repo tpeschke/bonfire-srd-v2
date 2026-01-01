@@ -8,10 +8,18 @@ export default function populateChapterContents(book: Books, guideChapterNameArr
     return {
         book, chapterContents,
         chapterName: guideChapterNameArray[chapterNumber - 1],
-        info: chapterInfo[book][chapterNumber - 1],
+        info: getChapterInfo(book, sectionNumber, chapterNumber),
         section: sectionNumber,
         chapter: chapterNumber,
         navigation: createNavigationArray(chapterContents),
+    }
+}
+
+function getChapterInfo(book: Books, sectionNumber: number | undefined, chapterNumber: number): any {
+    if (sectionNumber && book === 'gms') {
+        return chapterInfo[book][sectionNumber][chapterNumber - 1]
+    } else {
+        return chapterInfo[book][chapterNumber - 1]
     }
 }
 
