@@ -1,4 +1,6 @@
-const academicTools = {
+import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
+
+const academicTools: UniqueItemTable = {
     tableName: 'Academic Tools',
     headers: [
         [

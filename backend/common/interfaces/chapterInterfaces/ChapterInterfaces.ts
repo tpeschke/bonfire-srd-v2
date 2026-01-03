@@ -69,7 +69,7 @@ export interface LockedNavigation {
 export type ChapterInfo = null | ChapterInfoBaseObject
 
 export interface ChapterInfoBaseObject {
-    type: 'kits' | 'rudiments' | 'burdensNInjuries' | 'equipment',
+    type: 'kits' | 'rudiments' | 'burdensNInjuries' | 'equipment' | 'uniqueItems',
     info: any[]
 }
 
