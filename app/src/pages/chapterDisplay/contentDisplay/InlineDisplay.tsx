@@ -11,6 +11,7 @@ import ArmorStatsTable from './inlineComponents/equipmentTables/ArmorStatsTable'
 import ShieldStatsTable from './inlineComponents/equipmentTables/ShieldStatsTable';
 import MeleeWeaponStats from './inlineComponents/equipmentTables/MeleeWeaponStats';
 import RangedWeaponStats from './inlineComponents/equipmentTables/RangedWeaponStats';
+import UniqueItemTables from './inlineComponents/uniqueItemTables/UniqueItemTables';
 
 interface Props {
     componentInfo: ComponentContent,
@@ -203,6 +204,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <MeleeWeaponStats meleeWeaponStats={chapterInfo ? chapterInfo.info[0].meleeWeaponStats : []} />
         case 'rangedWeaponStats':
             return <RangedWeaponStats rangedWeaponStats={chapterInfo ? chapterInfo.info[0].rangedWeaponStats : []} />
+        case 'uniqueItemTables':
+            return <UniqueItemTables tables={chapterInfo ? chapterInfo.info : []}/>
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }

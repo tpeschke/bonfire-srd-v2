@@ -155,6 +155,7 @@ thead {
 }
 
 tr th, tr td {
+    white-space: break-spaces;
     padding: 3px 5px
 }
 
