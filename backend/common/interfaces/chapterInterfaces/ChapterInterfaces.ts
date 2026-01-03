@@ -7,7 +7,7 @@ export interface MarkdownContent extends ChapterContent {
     body: string
 }
 
-export type ValidComponents = 'characteristicGenerator' | 'kits' | 'originsShapesTraditions' | 'rudimentsByTradition' | 'burdensNInjuries' | 'relationshipChart' | 'uniqueItemTables' | AncestryImages | ClassImages | EquipmentTables | GMImages
+export type ValidComponents = 'characteristicGenerator' | 'kits' | 'originsShapesTraditions' | 'rudimentsByTradition' | 'burdensNInjuries' | 'relationshipChart' | AncestryImages | ClassImages | EquipmentTables | GMImages | uniqueItemTables
 
 type AncestryImages = 'dwarfImage' | 'elfImage' | 'humanImage' | 'orcImage' | 'pechImage' | 'ratfolkImage' | 'gauntImage' | 'starCursedImage'
 
@@ -24,6 +24,8 @@ type villageMapImages = 'villageMap1' | 'villageMap2.1' | 'villageMap2.2' | 'vil
 type dungeonImages = 'wizardTowerMapImage' | 'roomExampleMap' | dungeonMappingImages
 
 type dungeonMappingImages ='lockAndKeyExplanation' | '1to1Variants' | '1toManyVariants' | '1WayVariants' | 'ManyTo1Variants' | 'OrSwitchVariants' | 'prereqVariants' | 'singleToManyVariants' | 'step2Example' | 'step4Example1' | 'step4Example2' | 'step4Example3' | 'step4Example4' | 'step4Example5' | 'step4Example6' | 'step4Example7' | 'step5Example1' | 'step5Example2' | 'step5Example3' | 'step5Example4' | 'step5Example5' | 'step5ExampleFinal'
+
+type uniqueItemTables = 'uniqueItemCategories' | 'academicTools' | 'adventuringGear'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 
