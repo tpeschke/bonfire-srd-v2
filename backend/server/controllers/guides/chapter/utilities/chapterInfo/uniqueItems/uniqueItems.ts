@@ -31,6 +31,11 @@ import personalContainers from "./tables/personalContainers";
 import rawGoods from "./tables/rawGoods";
 import religiousItems from "./tables/religiousItems";
 import shieldsUniqueItems from "./tables/shields";
+import tradeTools from "./tables/tradeTools";
+import tableToDetermineWeapon from "./tables/weapons/tableToDetermine";
+import axesUniqueItems from "./tables/weapons/axesUniqueItems";
+import polearmsUniqueItems from "./tables/weapons/polearmsUniqueItems";
+import sidearmsUniqueItems from "./tables/weapons/sidearmsUniqueItems";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -72,7 +77,13 @@ const uniqueItems: UniqueItemsInfo = {
         rawGoods,
 
         religiousItems,
-        shieldsUniqueItems
+        shieldsUniqueItems,
+        tradeTools,
+        tableToDetermineWeapon,
+        axesUniqueItems,
+
+        polearmsUniqueItems,
+        sidearmsUniqueItems
     ]
 }
 

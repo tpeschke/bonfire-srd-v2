@@ -267,7 +267,17 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'religiousItems':
             return <Table table={chapterInfo ? chapterInfo.info[30] : []} />
         case 'shieldsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[21] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[31] : []} />
+        case 'tradeTools':
+            return <Table table={chapterInfo ? chapterInfo.info[32] : []} />
+        case 'tableToDetermineWeapon':
+            return <Table table={chapterInfo ? chapterInfo.info[33] : []} />
+        case 'axesUniqueItems':
+            return <Table table={chapterInfo ? chapterInfo.info[34] : []} />
+        case 'polearmsUniqueItems':
+            return <Table table={chapterInfo ? chapterInfo.info[35] : []} />
+        case 'sidearmsUniqueItems':
+            return <Table table={chapterInfo ? chapterInfo.info[36] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }
