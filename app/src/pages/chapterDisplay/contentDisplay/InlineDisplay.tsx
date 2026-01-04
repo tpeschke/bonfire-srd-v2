@@ -49,7 +49,7 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'weirdAdeptImage':
             return <Image isClass={true} src='https://i.imgur.com/sa2dkYn.png' />
         case 'structureImage':
-            return <Image src='https://i.imgur.com/O3mZArK.jpeg' goran={false} removeFloat={true} />
+            return <Image src='https://i.imgur.com/3D7PuxZ.jpeg' goran={false} removeFloat={true} />
         case 'createHexExample1':
             return <Image src='https://i.imgur.com/8dlKoXh.png' goran={false} removeFloat={true} />
         case 'createHexExample2':
