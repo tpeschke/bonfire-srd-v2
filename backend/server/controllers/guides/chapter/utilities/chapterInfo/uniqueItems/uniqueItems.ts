@@ -8,6 +8,11 @@ import lightArmor from "./tables/armor/lightArmor";
 import mediumArmor from "./tables/armor/mediumArmor";
 import heavyArmor from "./tables/armor/heavyArmor";
 import beverages from "./tables/beverages";
+import body from "./tables/clothing/body";
+import accessories from "./tables/clothing/Accessories";
+import footgear from "./tables/clothing/footgear";
+import headgear from "./tables/clothing/headgear";
+import tableToDetermineClothing from "./tables/clothing/tablesToDetermine";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -20,7 +25,13 @@ const uniqueItems: UniqueItemsInfo = {
         lightArmor,
         mediumArmor,
         heavyArmor,
-        beverages
+        beverages,
+        tableToDetermineClothing,
+        
+        accessories,
+        body,
+        footgear,
+        headgear
     ]
 }
 
