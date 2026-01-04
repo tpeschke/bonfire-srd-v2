@@ -26,6 +26,11 @@ import householdItems from "./tables/householdItems";
 import illumination from "./tables/illumination";
 import jewelry from "./tables/jewelry";
 import medical from "./tables/medical";
+import instruments from "./tables/instruments";
+import personalContainers from "./tables/personalContainers";
+import rawGoods from "./tables/rawGoods";
+import religiousItems from "./tables/religiousItems";
+import shieldsUniqueItems from "./tables/shields";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -61,7 +66,13 @@ const uniqueItems: UniqueItemsInfo = {
         illumination,
 
         jewelry,
-        medical
+        medical,
+        instruments,
+        personalContainers,
+        rawGoods,
+
+        religiousItems,
+        shieldsUniqueItems
     ]
 }
 

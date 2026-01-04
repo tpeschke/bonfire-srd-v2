@@ -258,6 +258,16 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Table table={chapterInfo ? chapterInfo.info[25] : []} />
         case 'medical':
             return <Table table={chapterInfo ? chapterInfo.info[26] : []} />
+        case 'instruments':
+            return <Table table={chapterInfo ? chapterInfo.info[27] : []} />
+        case 'personalContainers':
+            return <Table table={chapterInfo ? chapterInfo.info[28] : []} />
+        case 'rawGoods':
+            return <Table table={chapterInfo ? chapterInfo.info[29] : []} />
+        case 'religiousItems':
+            return <Table table={chapterInfo ? chapterInfo.info[30] : []} />
+        case 'shieldsUniqueItems':
+            return <Table table={chapterInfo ? chapterInfo.info[21] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }
