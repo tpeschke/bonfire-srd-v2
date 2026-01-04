@@ -212,6 +212,14 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Table table={chapterInfo ? chapterInfo.info[2] : []} />
         case 'alchemicalSubstances':
             return <Table table={chapterInfo ? chapterInfo.info[3] : []} />
+        case 'tableToDetermineArmor':
+            return <Table table={chapterInfo ? chapterInfo.info[4] : []} />
+        case 'lightArmor':
+            return <Table table={chapterInfo ? chapterInfo.info[5] : []} />
+        case 'mediumArmor':
+            return <Table table={chapterInfo ? chapterInfo.info[6] : []} />
+        case 'heavyArmor':
+            return <Table table={chapterInfo ? chapterInfo.info[7] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }
