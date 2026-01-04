@@ -9,10 +9,19 @@ import mediumArmor from "./tables/armor/mediumArmor";
 import heavyArmor from "./tables/armor/heavyArmor";
 import beverages from "./tables/beverages";
 import body from "./tables/clothing/body";
-import accessories from "./tables/clothing/Accessories";
+import accessories from "./tables/clothing/accessories";
 import footgear from "./tables/clothing/footgear";
 import headgear from "./tables/clothing/headgear";
 import tableToDetermineClothing from "./tables/clothing/tablesToDetermine";
+import entertainment from "./tables/entertainment";
+import fabricsNRopes from "./tables/fabricsNRopes";
+import tableToDetermineFood from "./tables/food/tablesToDetermine";
+import preppedFood from "./tables/food/preppedFood";
+import bread from "./tables/food/bread";
+import fruitsNVeggies from "./tables/food/fruitsNVeggies";
+import protein from "./tables/food/protein";
+import nuts from "./tables/food/nuts";
+import spicesNSeasonings from "./tables/food/spicesNSeasonings";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -22,16 +31,28 @@ const uniqueItems: UniqueItemsInfo = {
         adventuringGear,
         alchemicalSubstances,
         tableToDetermineArmor,
+        // I'm putting gaps at every 5 elements for readability
         lightArmor,
         mediumArmor,
         heavyArmor,
         beverages,
         tableToDetermineClothing,
-        
+
         accessories,
         body,
         footgear,
-        headgear
+        headgear,
+        entertainment,
+
+        fabricsNRopes,
+        tableToDetermineFood,
+        preppedFood,
+        bread,
+        fruitsNVeggies,
+
+        protein,
+        nuts,
+        spicesNSeasonings
     ]
 }
 
