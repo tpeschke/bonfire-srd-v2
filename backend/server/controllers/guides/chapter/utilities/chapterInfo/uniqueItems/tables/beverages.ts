@@ -5,11 +5,7 @@ const beverages: UniqueItemTable = {
         [
             {
                 label: "",
-                colSpan: 3
-            },
-            {
-                label: "Material",
-                colSpan: 2
+                colSpan: 4
             },
             {
                 label: "Details",
@@ -20,37 +16,36 @@ const beverages: UniqueItemTable = {
             "Roll",
             "Type",
             "Base Price",
-            "Base Material(s)",
             "Size",
             "Colors"
         ]
     ],
     rows: [
-        ["1-4", "Ale (gallon)", 0.8, "0.8 sc", "M", 1],
-        ["5-8", "Almond Milk (pint)", 1, "1 sc", "S", 1],
-        ["9-12", "Applejack (pint)", 2, "2 sc", "S", 1],
-        ["13-16", "Barley-Broth", 0.01, "0.01 sc", "S", 1],
-        ["17-20", "Beer (gallon)", 0.8, "0.8 sc", "M", 1],
-        ["21-24", "Bitter Broth (pint)", 1, "1 sc", "S", 1],
-        ["25-28", "Braggart (pint)", 1, "1 sc", "S", 1],
-        ["29-32", "Brandy (gallon)", 4, "4 sc", "M", 1],
-        ["33-36", "Cider, Hard (gallon)", 3.2, "3.2 sc", "M", 1],
-        ["37-40", "Cider, Sweet (gallon)", 2, "2 sc", "M", 1],
-        ["41-44", "Decoction (pint)", 1, "1 sc", "S", 1],
-        ["45-48", "Furmore (pint)", 1, "1 sc", "S", 1],
-        ["49-52", "Grog (gallon)", 0.5, "0.5 sc", "M", 1],
-        ["53-56", "Lemon Juice (gallon)", 4, "4 sc", "M", 1],
-        ["57-60", "Liver Squeezings (cup)", 1, "1 sc", "T", 1],
-        ["61-64", "Mead (gallon)", 3.8, "3.8 sc", "M", 1],
-        ["65-68", "Milk (gallon)", 0.2, "0.2 sc", "M", 1],
-        ["69-72", "Miracle Water (cup)", 5, "5 sc", "T", 1],
-        ["73-76", "Must (cup)", 1, "1 sc", "T", 1],
-        ["77-80", "Posset", 0.5, "0.5 sc", "S", 1],
-        ["81-84", "Rum (gallon)", 15, "15 sc", "M", 1],
-        ["85-88", "Tea (cup)", 4, "4 sc", "T", 1],
-        ["89-92", "Vinegar (gallon)", 6, "6 sc", "M", 1],
-        ["93-96", "Whiskey (gallon)", 0.4, "0.4 sc", "M", 1],
-        ["97-100", "Wine (gallon)", 5.4, "5.4 sc", "M", 1]
+        ["1-4", "Ale (gallon)", 0.8, "M", 1],
+        ["5-8", "Almond Milk (pint)", 1, "S", 1],
+        ["9-12", "Applejack (pint)", 2, "S", 1],
+        ["13-16", "Barley-Broth", 0.01, "S", 1],
+        ["17-20", "Beer (gallon)", 0.8, "M", 1],
+        ["21-24", "Bitter Broth (pint)", 1, "S", 1],
+        ["25-28", "Braggart (pint)", 1, "S", 1],
+        ["29-32", "Brandy (gallon)", 4, "M", 1],
+        ["33-36", "Cider, Hard (gallon)", 3.2, "M", 1],
+        ["37-40", "Cider, Sweet (gallon)", 2, "M", 1],
+        ["41-44", "Decoction (pint)", 1, "S", 1],
+        ["45-48", "Furmore (pint)", 1, "S", 1],
+        ["49-52", "Grog (gallon)", 0.5, "M", 1],
+        ["53-56", "Lemon Juice (gallon)", 4, "M", 1],
+        ["57-60", "Liver Squeezings (cup)", 1, "T", 1],
+        ["61-64", "Mead (gallon)", 3.8, "M", 1],
+        ["65-68", "Milk (gallon)", 0.2, "M", 1],
+        ["69-72", "Miracle Water (cup)", 5, "T", 1],
+        ["73-76", "Must (cup)", 1, "T", 1],
+        ["77-80", "Posset", 0.5, "S", 1],
+        ["81-84", "Rum (gallon)", 15, "M", 1],
+        ["85-88", "Tea (cup)", 4, "T", 1],
+        ["89-92", "Vinegar (gallon)", 6, "M", 1],
+        ["93-96", "Whiskey (gallon)", 0.4, "M", 1],
+        ["97-100", "Wine (gallon)", 5.4, "M", 1]
     ]
 }
 

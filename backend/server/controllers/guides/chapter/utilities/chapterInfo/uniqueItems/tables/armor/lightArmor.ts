@@ -28,8 +28,8 @@ const lightArmor: UniqueItemTable = {
         ]
     ],
     rows: [
-        ["1-2", "Buff Coat", 130, "Leather", "S", 8, 2],
-        ["3-4", "Gambeson", 90, "Cloth", "S", 8, 2],
+        ["1-2", "Buff Coat", 130, "Leather", "S", 8, 2, ""],
+        ["3-4", "Gambeson", 90, "Cloth", "S", 8, 2, ""],
         ["5-6", "Leather", 190, "Leather", "S", 4, 2, 1]
     ]
 }
