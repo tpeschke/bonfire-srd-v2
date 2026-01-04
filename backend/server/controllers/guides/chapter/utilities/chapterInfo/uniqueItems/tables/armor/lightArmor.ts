@@ -1,7 +1,6 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const lightArmor: UniqueItemTable = {
-    tableName: "Light Armor",
     headers: [
         [
             {

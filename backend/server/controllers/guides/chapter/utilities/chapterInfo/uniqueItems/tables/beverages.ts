@@ -1,7 +1,6 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const beverages: UniqueItemTable = {
-    tableName: "Beverages",
     headers: [
         [
             {

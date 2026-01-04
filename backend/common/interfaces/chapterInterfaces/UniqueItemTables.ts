@@ -6,7 +6,6 @@ export interface UniqueItemsInfo extends ChapterInfoBaseObject {
 }
 
 export interface UniqueItemTable {
-    tableName: string,
     headers: (string | HeaderWithLabel)[][],
     rows: (string | number)[][]
 }

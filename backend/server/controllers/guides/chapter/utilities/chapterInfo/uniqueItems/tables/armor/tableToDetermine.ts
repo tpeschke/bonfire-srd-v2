@@ -1,11 +1,10 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const tableToDetermineArmor: UniqueItemTable = {
-    tableName: "Alchemical Substances",
     headers: [
         [
             "d20",
-            "Armor Type"
+            "Type"
         ]
     ],
     rows: [

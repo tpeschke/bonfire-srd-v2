@@ -1,7 +1,6 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const mediumArmor: UniqueItemTable = {
-    tableName: "Medium Armor",
     headers: [
         [
             {

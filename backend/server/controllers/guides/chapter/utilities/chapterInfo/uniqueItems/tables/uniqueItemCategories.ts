@@ -1,7 +1,6 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const uniqueItemCategories: UniqueItemTable = {
-    tableName: "Unique Item Categories",
     headers: [
         [
             "d100",

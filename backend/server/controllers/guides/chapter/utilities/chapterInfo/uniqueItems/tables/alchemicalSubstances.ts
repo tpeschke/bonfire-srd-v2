@@ -1,7 +1,6 @@
 import { UniqueItemTable } from "@srd/common/interfaces/chapterInterfaces/UniqueItemTables"
 
 const alchemicalSubstances: UniqueItemTable = {
-    tableName: "Alchemical Substances",
     headers: [
         [
             {
