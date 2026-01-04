@@ -22,6 +22,10 @@ import fruitsNVeggies from "./tables/food/fruitsNVeggies";
 import protein from "./tables/food/protein";
 import nuts from "./tables/food/nuts";
 import spicesNSeasonings from "./tables/food/spicesNSeasonings";
+import householdItems from "./tables/householdItems";
+import illumination from "./tables/illumination";
+import jewelry from "./tables/jewelry";
+import medical from "./tables/medical";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -52,7 +56,12 @@ const uniqueItems: UniqueItemsInfo = {
 
         protein,
         nuts,
-        spicesNSeasonings
+        spicesNSeasonings,
+        householdItems,
+        illumination,
+
+        jewelry,
+        medical
     ]
 }
 
