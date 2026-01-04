@@ -7,6 +7,7 @@ import tableToDetermineArmor from "./tables/armor/tableToDetermine";
 import lightArmor from "./tables/armor/lightArmor";
 import mediumArmor from "./tables/armor/mediumArmor";
 import heavyArmor from "./tables/armor/heavyArmor";
+import beverages from "./tables/beverages";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -18,7 +19,8 @@ const uniqueItems: UniqueItemsInfo = {
         tableToDetermineArmor,
         lightArmor,
         mediumArmor,
-        heavyArmor
+        heavyArmor,
+        beverages
     ]
 }
 
