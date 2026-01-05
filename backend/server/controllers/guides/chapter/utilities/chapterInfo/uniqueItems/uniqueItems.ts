@@ -1,102 +1,104 @@
-import academicTools from "./tables/academicTools";
-import adventuringGear from "./tables/adventuringGear";
+import academicTools from "./tables/items/academicTools";
+import adventuringGear from "./tables/items/adventuringGear";
 import { UniqueItemsInfo } from '@srd/common/interfaces/chapterInterfaces/UniqueItemTables'
-import uniqueItemCategories from "./tables/uniqueItemCategories";
-import alchemicalSubstances from "./tables/alchemicalSubstances";
-import tableToDetermineArmor from "./tables/armor/tableToDetermine";
-import lightArmor from "./tables/armor/lightArmor";
-import mediumArmor from "./tables/armor/mediumArmor";
-import heavyArmor from "./tables/armor/heavyArmor";
-import beverages from "./tables/beverages";
-import body from "./tables/clothing/body";
-import accessories from "./tables/clothing/accessories";
-import footgear from "./tables/clothing/footgear";
-import headgear from "./tables/clothing/headgear";
-import tableToDetermineClothing from "./tables/clothing/tablesToDetermine";
-import entertainment from "./tables/entertainment";
-import fabricsNRopes from "./tables/fabricsNRopes";
-import tableToDetermineFood from "./tables/food/tablesToDetermine";
-import preppedFood from "./tables/food/preppedFood";
-import bread from "./tables/food/bread";
-import fruitsNVeggies from "./tables/food/fruitsNVeggies";
-import protein from "./tables/food/protein";
-import nuts from "./tables/food/nuts";
-import spicesNSeasonings from "./tables/food/spicesNSeasonings";
-import householdItems from "./tables/householdItems";
-import illumination from "./tables/illumination";
-import jewelry from "./tables/jewelry";
-import medical from "./tables/medical";
-import instruments from "./tables/instruments";
-import personalContainers from "./tables/personalContainers";
-import rawGoods from "./tables/rawGoods";
-import religiousItems from "./tables/religiousItems";
-import shieldsUniqueItems from "./tables/shields";
-import tradeTools from "./tables/tradeTools";
-import tableToDetermineWeapon from "./tables/weapons/tableToDetermine";
-import axesUniqueItems from "./tables/weapons/axesUniqueItems";
-import polearmsUniqueItems from "./tables/weapons/polearmsUniqueItems";
-import sidearmsUniqueItems from "./tables/weapons/sidearmsUniqueItems";
-import swordsUniqueItems from "./tables/weapons/swordsUniqueItems";
-import traumaUniqueItems from "./tables/weapons/traumaUniqueItems";
-import thrownUniqueItems from "./tables/weapons/thrownUniqueItems";
-import mechanicalRangedUniqueItems from "./tables/weapons/mechanicalRangeUniqueItems";
-import firearmsUniqueItems from "./tables/weapons/firearmsUniqueItems";
-import worksOfArt from "./tables/worksOfArt";
+import uniqueItemCategories from "./tables/items/uniqueItemCategories";
+import alchemicalSubstances from "./tables/items/alchemicalSubstances";
+import tableToDetermineArmor from "./tables/items/armor/tableToDetermine";
+import lightArmor from "./tables/items/armor/lightArmor";
+import mediumArmor from "./tables/items/armor/mediumArmor";
+import heavyArmor from "./tables/items/armor/heavyArmor";
+import beverages from "./tables/items/beverages";
+import body from "./tables/items/clothing/body";
+import accessories from "./tables/items/clothing/accessories";
+import footgear from "./tables/items/clothing/footgear";
+import headgear from "./tables/items/clothing/headgear";
+import tableToDetermineClothing from "./tables/items/clothing/tablesToDetermine";
+import entertainment from "./tables/items/entertainment";
+import fabricsNRopes from "./tables/items/fabricsNRopes";
+import tableToDetermineFood from "./tables/items/food/tablesToDetermine";
+import preppedFood from "./tables/items/food/preppedFood";
+import bread from "./tables/items/food/bread";
+import fruitsNVeggies from "./tables/items/food/fruitsNVeggies";
+import protein from "./tables/items/food/protein";
+import nuts from "./tables/items/food/nuts";
+import spicesNSeasonings from "./tables/items/food/spicesNSeasonings";
+import householdItems from "./tables/items/householdItems";
+import illumination from "./tables/items/illumination";
+import jewelry from "./tables/items/jewelry";
+import medical from "./tables/items/medical";
+import instruments from "./tables/items/instruments";
+import personalContainers from "./tables/items/personalContainers";
+import rawGoods from "./tables/items/rawGoods";
+import religiousItems from "./tables/items/religiousItems";
+import shieldsUniqueItems from "./tables/items/shields";
+import tradeTools from "./tables/items/tradeTools";
+import tableToDetermineWeapon from "./tables/items/weapons/tableToDetermine";
+import axesUniqueItems from "./tables/items/weapons/axesUniqueItems";
+import polearmsUniqueItems from "./tables/items/weapons/polearmsUniqueItems";
+import sidearmsUniqueItems from "./tables/items/weapons/sidearmsUniqueItems";
+import swordsUniqueItems from "./tables/items/weapons/swordsUniqueItems";
+import traumaUniqueItems from "./tables/items/weapons/traumaUniqueItems";
+import thrownUniqueItems from "./tables/items/weapons/thrownUniqueItems";
+import mechanicalRangedUniqueItems from "./tables/items/weapons/mechanicalRangeUniqueItems";
+import firearmsUniqueItems from "./tables/items/weapons/firearmsUniqueItems";
+import worksOfArt from "./tables/items/worksOfArt";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
     info: [
-        uniqueItemCategories,
-        academicTools,
-        adventuringGear,
-        alchemicalSubstances,
-        tableToDetermineArmor,
-        // I'm putting gaps at every 5 elements for readability
-        lightArmor,
-        mediumArmor,
-        heavyArmor,
-        beverages,
-        tableToDetermineClothing,
+        [
+            uniqueItemCategories,
+            academicTools,
+            adventuringGear,
+            alchemicalSubstances,
+            tableToDetermineArmor,
+            // I'm putting gaps at every 5 elements for readability
+            lightArmor,
+            mediumArmor,
+            heavyArmor,
+            beverages,
+            tableToDetermineClothing,
 
-        accessories,
-        body,
-        footgear,
-        headgear,
-        entertainment,
+            accessories,
+            body,
+            footgear,
+            headgear,
+            entertainment,
 
-        fabricsNRopes,
-        tableToDetermineFood,
-        preppedFood,
-        bread,
-        fruitsNVeggies,
+            fabricsNRopes,
+            tableToDetermineFood,
+            preppedFood,
+            bread,
+            fruitsNVeggies,
 
-        protein,
-        nuts,
-        spicesNSeasonings,
-        householdItems,
-        illumination,
+            protein,
+            nuts,
+            spicesNSeasonings,
+            householdItems,
+            illumination,
 
-        jewelry,
-        medical,
-        instruments,
-        personalContainers,
-        rawGoods,
+            jewelry,
+            medical,
+            instruments,
+            personalContainers,
+            rawGoods,
 
-        religiousItems,
-        shieldsUniqueItems,
-        tradeTools,
-        tableToDetermineWeapon,
-        axesUniqueItems,
+            religiousItems,
+            shieldsUniqueItems,
+            tradeTools,
+            tableToDetermineWeapon,
+            axesUniqueItems,
 
-        polearmsUniqueItems,
-        sidearmsUniqueItems,
-        swordsUniqueItems,
-        traumaUniqueItems,
-        thrownUniqueItems,
+            polearmsUniqueItems,
+            sidearmsUniqueItems,
+            swordsUniqueItems,
+            traumaUniqueItems,
+            thrownUniqueItems,
 
-        mechanicalRangedUniqueItems,
-        firearmsUniqueItems,
-        worksOfArt
+            mechanicalRangedUniqueItems,
+            firearmsUniqueItems,
+            worksOfArt
+        ]
     ]
 }
 

@@ -2,7 +2,9 @@ import { ChapterInfoBaseObject } from "./ChapterInterfaces"
 
 export interface UniqueItemsInfo extends ChapterInfoBaseObject {
     type: 'uniqueItems',
-    info: UniqueItemTable[]
+    info: [
+        UniqueItemTable[]
+    ]
 }
 
 export interface UniqueItemTable {

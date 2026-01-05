@@ -205,91 +205,91 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'rangedWeaponStats':
             return <RangedWeaponStats rangedWeaponStats={chapterInfo ? chapterInfo.info[0].rangedWeaponStats : []} />
         case 'uniqueItemCategories':
-            return <Table table={chapterInfo ? chapterInfo.info[0] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][0] : []} />
         case 'academicTools':
-            return <Table table={chapterInfo ? chapterInfo.info[1] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][1] : []} />
         case 'adventuringGear':
-            return <Table table={chapterInfo ? chapterInfo.info[2] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][2] : []} />
         case 'alchemicalSubstances':
-            return <Table table={chapterInfo ? chapterInfo.info[3] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][3] : []} />
         case 'tableToDetermineArmor':
-            return <Table table={chapterInfo ? chapterInfo.info[4] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][4] : []} />
         case 'lightArmor':
-            return <Table table={chapterInfo ? chapterInfo.info[5] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][5] : []} />
         case 'mediumArmor':
-            return <Table table={chapterInfo ? chapterInfo.info[6] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][6] : []} />
         case 'heavyArmor':
-            return <Table table={chapterInfo ? chapterInfo.info[7] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][7] : []} />
         case 'beveragesUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[8] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][8] : []} />
         case 'tableToDetermineClothing':
-            return <Table table={chapterInfo ? chapterInfo.info[9] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][9] : []} />
         case 'accessories':
-            return <Table table={chapterInfo ? chapterInfo.info[10] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][10] : []} />
         case 'body':
-            return <Table table={chapterInfo ? chapterInfo.info[11] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][11] : []} />
         case 'footgear':
-            return <Table table={chapterInfo ? chapterInfo.info[12] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][12] : []} />
         case 'headgear':
-            return <Table table={chapterInfo ? chapterInfo.info[13] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][13] : []} />
         case 'entertainment':
-            return <Table table={chapterInfo ? chapterInfo.info[14] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][14] : []} />
         case 'fabricsNRopes':
-            return <Table table={chapterInfo ? chapterInfo.info[15] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][15] : []} />
         case 'tableToDetermineFood':
-            return <Table table={chapterInfo ? chapterInfo.info[16] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][16] : []} />
         case 'preppedFood':
-            return <Table table={chapterInfo ? chapterInfo.info[17] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][17] : []} />
         case 'bread':
-            return <Table table={chapterInfo ? chapterInfo.info[18] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][18] : []} />
         case 'fruitsNVeggies':
-            return <Table table={chapterInfo ? chapterInfo.info[19] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][19] : []} />
         case 'protein':
-            return <Table table={chapterInfo ? chapterInfo.info[20] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][20] : []} />
         case 'nuts':
-            return <Table table={chapterInfo ? chapterInfo.info[21] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][21] : []} />
         case 'spicesNSeasonings':
-            return <Table table={chapterInfo ? chapterInfo.info[22] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][22] : []} />
         case 'householdItems':
-            return <Table table={chapterInfo ? chapterInfo.info[23] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][23] : []} />
         case 'illumination':
-            return <Table table={chapterInfo ? chapterInfo.info[24] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][24] : []} />
         case 'jewelry':
-            return <Table table={chapterInfo ? chapterInfo.info[25] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][25] : []} />
         case 'medical':
-            return <Table table={chapterInfo ? chapterInfo.info[26] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][26] : []} />
         case 'instruments':
-            return <Table table={chapterInfo ? chapterInfo.info[27] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][27] : []} />
         case 'personalContainers':
-            return <Table table={chapterInfo ? chapterInfo.info[28] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][28] : []} />
         case 'rawGoods':
-            return <Table table={chapterInfo ? chapterInfo.info[29] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][29] : []} />
         case 'religiousItems':
-            return <Table table={chapterInfo ? chapterInfo.info[30] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][30] : []} />
         case 'shieldsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[31] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][31] : []} />
         case 'tradeTools':
-            return <Table table={chapterInfo ? chapterInfo.info[32] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][32] : []} />
         case 'tableToDetermineWeapon':
-            return <Table table={chapterInfo ? chapterInfo.info[33] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][33] : []} />
         case 'axesUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[34] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][34] : []} />
         case 'polearmsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[35] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][35] : []} />
         case 'sidearmsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[36] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][36] : []} />
         case 'swordsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[37] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][37] : []} />
         case 'traumaUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[38] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][38] : []} />
         case 'thrownUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[39] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][39] : []} />
         case 'mechanicalRangedUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[40] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][40] : []} />
         case 'firearmsUniqueItems':
-            return <Table table={chapterInfo ? chapterInfo.info[41] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][41] : []} />
         case 'worksOfArt':
-            return <Table table={chapterInfo ? chapterInfo.info[42] : []} />
+            return <Table table={chapterInfo ? chapterInfo.info[0][42] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }
