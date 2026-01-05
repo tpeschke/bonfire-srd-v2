@@ -36,6 +36,12 @@ import tableToDetermineWeapon from "./tables/weapons/tableToDetermine";
 import axesUniqueItems from "./tables/weapons/axesUniqueItems";
 import polearmsUniqueItems from "./tables/weapons/polearmsUniqueItems";
 import sidearmsUniqueItems from "./tables/weapons/sidearmsUniqueItems";
+import swordsUniqueItems from "./tables/weapons/swordsUniqueItems";
+import traumaUniqueItems from "./tables/weapons/traumaUniqueItems";
+import thrownUniqueItems from "./tables/weapons/thrownUniqueItems";
+import mechanicalRangedUniqueItems from "./tables/weapons/mechanicalRangeUniqueItems";
+import firearmsUniqueItems from "./tables/weapons/firearmsUniqueItems";
+import worksOfArt from "./tables/worksOfArt";
 
 const uniqueItems: UniqueItemsInfo = {
     type: 'uniqueItems',
@@ -83,7 +89,14 @@ const uniqueItems: UniqueItemsInfo = {
         axesUniqueItems,
 
         polearmsUniqueItems,
-        sidearmsUniqueItems
+        sidearmsUniqueItems,
+        swordsUniqueItems,
+        traumaUniqueItems,
+        thrownUniqueItems,
+
+        mechanicalRangedUniqueItems,
+        firearmsUniqueItems,
+        worksOfArt
     ]
 }
 
