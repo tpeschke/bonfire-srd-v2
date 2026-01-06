@@ -25,7 +25,7 @@ type dungeonImages = 'wizardTowerMapImage' | 'roomExampleMap' | dungeonMappingIm
 
 type dungeonMappingImages ='lockAndKeyExplanation' | '1to1Variants' | '1toManyVariants' | '1WayVariants' | 'ManyTo1Variants' | 'OrSwitchVariants' | 'prereqVariants' | 'singleToManyVariants' | 'step2Example' | 'step4Example1' | 'step4Example2' | 'step4Example3' | 'step4Example4' | 'step4Example5' | 'step4Example6' | 'step4Example7' | 'step5Example1' | 'step5Example2' | 'step5Example3' | 'step5Example4' | 'step5Example5' | 'step5ExampleFinal'
 
-type uniqueItemTables = uniqueItemBaseTables | uniqueItemArmorTables | uniqueItemClothingTables | uniqueItemFoodTables | uniqueItemWeaponTables
+type uniqueItemTables = uniqueItemBaseTables | uniqueItemArmorTables | uniqueItemClothingTables | uniqueItemFoodTables | uniqueItemWeaponTables | materials
 
 type uniqueItemBaseTables = 'uniqueItemCategories' | 'academicTools' | 'adventuringGear' | 'alchemicalSubstances' | 'beveragesUniqueItems' | 'entertainment' | 'fabricsNRopes' | 'householdItems' | 'illumination' | 'jewelry' | 'medical' | 'instruments' | 'personalContainers' | 'rawGoods' | 'religiousItems' | 'shieldsUniqueItems' | 'tradeTools' | 'worksOfArt'
 
@@ -36,6 +36,12 @@ type uniqueItemClothingTables = 'tableToDetermineClothing' | 'accessories' | 'bo
 type uniqueItemFoodTables = 'tableToDetermineFood' | 'preppedFood' | 'bread' | 'fruitsNVeggies' | 'protein' | 'nuts' | 'spicesNSeasonings'
 
 type uniqueItemWeaponTables = 'tableToDetermineWeapon' | 'axesUniqueItems' | 'polearmsUniqueItems' | 'sidearmsUniqueItems' | 'swordsUniqueItems' | 'traumaUniqueItems' | 'thrownUniqueItems' | 'mechanicalRangedUniqueItems' | 'firearmsUniqueItems'
+
+type materials = clothMaterials | leatherNFurMaterials
+
+type clothMaterials = 'commonCloth' | 'uncommonCloth' | 'rareCloth'
+
+type leatherNFurMaterials = 'commonFurOrLeather' | 'uncommonFurOrLeather' | 'rareFurOrLeather'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 
