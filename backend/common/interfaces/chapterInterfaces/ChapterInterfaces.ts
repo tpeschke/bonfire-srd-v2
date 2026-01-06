@@ -37,7 +37,7 @@ type uniqueItemFoodTables = 'tableToDetermineFood' | 'preppedFood' | 'bread' | '
 
 type uniqueItemWeaponTables = 'tableToDetermineWeapon' | 'axesUniqueItems' | 'polearmsUniqueItems' | 'sidearmsUniqueItems' | 'swordsUniqueItems' | 'traumaUniqueItems' | 'thrownUniqueItems' | 'mechanicalRangedUniqueItems' | 'firearmsUniqueItems'
 
-type materials = clothMaterials | leatherNFurMaterials | metals | paperProducts
+type materials = clothMaterials | leatherNFurMaterials | metals | paperProducts | stone | wax | wood
 
 type clothMaterials = 'commonCloth' | 'uncommonCloth' | 'rareCloth'
 
@@ -46,6 +46,12 @@ type leatherNFurMaterials = 'commonFurOrLeather' | 'uncommonFurOrLeather' | 'rar
 type metals = 'commonMetal' | 'uncommonMetal' | 'rareMetal'
 
 type paperProducts = 'commonPaperProducts' | 'uncommonPaperProducts' | 'rarePaperProducts'
+
+type stone = 'commonStone' | 'uncommonStone' | 'rareStone'
+
+type wax = 'commonWax' | 'uncommonWax' | 'rareWax'
+
+type wood = 'commonWood' | 'uncommonWood' | 'rareWood'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 

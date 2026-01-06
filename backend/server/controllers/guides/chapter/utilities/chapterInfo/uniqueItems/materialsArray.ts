@@ -11,6 +11,15 @@ import rareMetal from "./tables/materials/metal/rare";
 import commonPaperProducts from "./tables/materials/paperProducts/common";
 import uncommonPaperProducts from "./tables/materials/paperProducts/uncommon";
 import rarePaperProducts from "./tables/materials/paperProducts/rare";
+import commonStone from "./tables/materials/stone/common";
+import uncommonStone from "./tables/materials/stone/uncommon";
+import rareStone from "./tables/materials/stone/rare";
+import commonWax from "./tables/materials/wax/common";
+import uncommonWax from "./tables/materials/wax/uncommon";
+import rareWax from "./tables/materials/wax/rare";
+import commonWood from "./tables/materials/wood/common";
+import uncommonWood from "./tables/materials/wood/uncommon";
+import rareWood from "./tables/materials/wood/rare";
 
 const materials: UniqueItemTable[] = [
     commonCloth,
@@ -27,7 +36,19 @@ const materials: UniqueItemTable[] = [
 
     commonPaperProducts,
     uncommonPaperProducts,
-    rarePaperProducts
+    rarePaperProducts,
+
+    commonStone,
+    uncommonStone,
+    rareStone,
+
+    commonWax,
+    uncommonWax,
+    rareWax,
+
+    commonWood,
+    uncommonWood,
+    rareWood
 ]
 
 export default materials
