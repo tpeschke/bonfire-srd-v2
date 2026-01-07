@@ -53,11 +53,17 @@ type wax = 'commonWax' | 'uncommonWax' | 'rareWax'
 
 type wood = 'commonWood' | 'uncommonWood' | 'rareWood'
 
-type supportTables = animals | bodyParts | 'colors' | 'engraving'
+type supportTables = animals | bodyParts | 'colors' | 'engraving' | gem | personal | ancestry
 
 type animals = 'tableToDetermineAnimal' | 'airAnimals' | 'landAnimals' | 'waterAnimals'
 
 type bodyParts = 'tableToDetermineBodyPart' | 'arms' | 'head' | 'legs' | 'torso'
+
+type gem = 'gemType' | 'gemSize' | 'gemShape'
+
+type personal = 'timePeriod' | 'relatedTo'
+
+type ancestry = 'freeAncestries' | 'deluxeAncestries'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 

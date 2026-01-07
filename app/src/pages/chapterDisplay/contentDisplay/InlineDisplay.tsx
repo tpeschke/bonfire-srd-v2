@@ -354,6 +354,20 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Table table={chapterInfo ? chapterInfo.info[2][9] : []} />
         case 'engraving':
             return <Table table={chapterInfo ? chapterInfo.info[2][10] : []} />
+        case 'gemType':
+            return <Table table={chapterInfo ? chapterInfo.info[2][11] : []} />
+        case 'gemSize':
+            return <Table table={chapterInfo ? chapterInfo.info[2][12] : []} />
+        case 'gemShape':
+            return <Table table={chapterInfo ? chapterInfo.info[2][13] : []} />
+        case 'timePeriod':
+            return <Table table={chapterInfo ? chapterInfo.info[2][14] : []} />
+        case 'relatedTo':
+            return <Table table={chapterInfo ? chapterInfo.info[2][15] : []} />
+        case 'freeAncestries':
+            return <Table table={chapterInfo ? chapterInfo.info[2][16] : []} />
+        case 'deluxeAncestries':
+            return <Table table={chapterInfo ? chapterInfo.info[2][17] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }

@@ -10,6 +10,13 @@ import torso from "./tables/supportInfo/body/torso";
 import legs from "./tables/supportInfo/body/legs";
 import colors from "./tables/supportInfo/colors";
 import engraving from "./tables/supportInfo/engravings";
+import gemType from "./tables/supportInfo/gem/type";
+import gemSize from "./tables/supportInfo/gem/size";
+import gemShape from "./tables/supportInfo/gem/shape";
+import timePeriod from "./tables/supportInfo/personal/timePeriod";
+import relatedTo from "./tables/supportInfo/personal/relatedTo";
+import freeAncestries from "./tables/supportInfo/ancestry/free";
+import deluxeAncestries from "./tables/supportInfo/ancestry/deluxe";
 
 const supportInfo: UniqueItemTable[] = [
     tableToDetermineAnimal,
@@ -24,7 +31,17 @@ const supportInfo: UniqueItemTable[] = [
     legs,
 
     colors,
-    engraving
+    engraving,
+
+    gemType,
+    gemSize,
+    gemShape,
+
+    timePeriod,
+    relatedTo,
+
+    freeAncestries,
+    deluxeAncestries
 ]
 
 export default supportInfo
