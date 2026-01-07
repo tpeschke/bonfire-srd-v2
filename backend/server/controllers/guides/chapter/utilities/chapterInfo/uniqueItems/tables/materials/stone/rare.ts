@@ -15,7 +15,7 @@ const rareStone: UniqueItemTable = {
         ["3 - 4", "Quartz", "4", "Ignore the first Wear gained", "+3 Pos"],
         ["5 - 6", "Marble", "4", "Ignore the first Wear gained", "+3 Pos"],
         ["7 - 8", "Crystal", "4", "Ignore the first Wear gained", "+3 Pos"],
-        ["9 - 10", "Glass", "5", "None", "+5 Pos"]
+        ["9 - 10", "Glass", "5", "", "+5 Pos"]
     ]
 }
 

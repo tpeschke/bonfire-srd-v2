@@ -332,6 +332,26 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Table table={chapterInfo ? chapterInfo.info[1][19] : []} />
         case 'rareWood':
             return <Table table={chapterInfo ? chapterInfo.info[1][20] : []} />
+        case 'tableToDetermineAnimal':
+            return <Table table={chapterInfo ? chapterInfo.info[2][0] : []} />
+        case 'landAnimals':
+            return <Table table={chapterInfo ? chapterInfo.info[2][1] : []} />
+        case 'airAnimals':
+            return <Table table={chapterInfo ? chapterInfo.info[2][2] : []} />
+        case 'waterAnimals':
+            return <Table table={chapterInfo ? chapterInfo.info[2][3] : []} />
+        case 'tableToDetermineBodyPart':
+            return <Table table={chapterInfo ? chapterInfo.info[2][4] : []} />
+        case 'head':
+            return <Table table={chapterInfo ? chapterInfo.info[2][5] : []} />
+        case 'arms':
+            return <Table table={chapterInfo ? chapterInfo.info[2][6] : []} />
+        case 'torso':
+            return <Table table={chapterInfo ? chapterInfo.info[2][7] : []} />
+        case 'legs':
+            return <Table table={chapterInfo ? chapterInfo.info[2][8] : []} />
+        case 'colors':
+            return <Table table={chapterInfo ? chapterInfo.info[2][9] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }

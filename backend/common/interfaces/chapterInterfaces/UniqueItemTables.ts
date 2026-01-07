@@ -4,6 +4,7 @@ export interface UniqueItemsInfo extends ChapterInfoBaseObject {
     type: 'uniqueItems',
     info: [
         UniqueItemTable[],
+        UniqueItemTable[],
         UniqueItemTable[]
     ]
 }
