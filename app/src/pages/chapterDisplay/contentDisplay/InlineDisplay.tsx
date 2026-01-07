@@ -352,6 +352,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Table table={chapterInfo ? chapterInfo.info[2][8] : []} />
         case 'colors':
             return <Table table={chapterInfo ? chapterInfo.info[2][9] : []} />
+        case 'engraving':
+            return <Table table={chapterInfo ? chapterInfo.info[2][10] : []} />
         default:
             return <div className="component-shell"><p>Something Went Wrong With The {componentInfo.component} Component</p></div>
     }

@@ -9,6 +9,7 @@ import arms from "./tables/supportInfo/body/arms";
 import torso from "./tables/supportInfo/body/torso";
 import legs from "./tables/supportInfo/body/legs";
 import colors from "./tables/supportInfo/colors";
+import engraving from "./tables/supportInfo/engravings";
 
 const supportInfo: UniqueItemTable[] = [
     tableToDetermineAnimal,
@@ -23,6 +24,7 @@ const supportInfo: UniqueItemTable[] = [
     legs,
 
     colors,
+    engraving
 ]
 
 export default supportInfo

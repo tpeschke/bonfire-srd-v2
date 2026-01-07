@@ -53,7 +53,7 @@ type wax = 'commonWax' | 'uncommonWax' | 'rareWax'
 
 type wood = 'commonWood' | 'uncommonWood' | 'rareWood'
 
-type supportTables = animals | bodyParts | 'colors'
+type supportTables = animals | bodyParts | 'colors' | 'engraving'
 
 type animals = 'tableToDetermineAnimal' | 'airAnimals' | 'landAnimals' | 'waterAnimals'
 
