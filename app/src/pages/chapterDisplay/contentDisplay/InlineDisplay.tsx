@@ -12,6 +12,7 @@ import ShieldStatsTable from './inlineComponents/equipmentTables/ShieldStatsTabl
 import MeleeWeaponStats from './inlineComponents/equipmentTables/MeleeWeaponStats';
 import RangedWeaponStats from './inlineComponents/equipmentTables/RangedWeaponStats';
 import Table from './inlineComponents/uniqueItemTables/Table';
+import QuickReferenceImages from './inlineComponents/quickReferenceImages/QuickReferenceImages';
 
 interface Props {
     componentInfo: ComponentContent,
@@ -146,6 +147,20 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/t433sju.png' goran={false} removeFloat={true} />
         case 'overlandEncounterTable':
             return <Image src='https://i.imgur.com/CVW3YH5.png' goran={false} removeFloat={true} />
+        case 'factionQuickReference':
+            return <QuickReferenceImages src={['https://i.imgur.com/be5bBlM.png', 'https://i.imgur.com/AXkEjyi.png']} />
+        case 'monsterQuickReference':
+            return <Image src='https://i.imgur.com/R8qcVGl.png' goran={false} removeFloat={true} />
+        case 'npcQuickReference':
+            return <QuickReferenceImages src={['https://i.imgur.com/DpaXLSv.png', 'https://i.imgur.com/k748XOG.png']} />
+        case 'obstacleQuickReference':
+            return <Image src='https://i.imgur.com/cujBBqv.png' goran={false} removeFloat={true} />
+        case 'perilQuickReference':
+            return <Image src='https://i.imgur.com/lMgFrf5.png' goran={false} removeFloat={true} />
+        case 'settlementQuickReference':
+            return <QuickReferenceImages src={['https://i.imgur.com/VDiTsK9.png', 'https://i.imgur.com/ZEZOg8D.png']} />
+        case 'threatQuickReference':
+            return <QuickReferenceImages src={['https://i.imgur.com/c3Yzhmr.png', 'https://i.imgur.com/bTGzVBK.png']} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

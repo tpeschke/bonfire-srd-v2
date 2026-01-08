@@ -1,0 +1,11 @@
+.quick-reference-images>div {
+    width: 49%;
+}
+
+.quick-reference-images>div p {
+    text-indent: 0;
+}
+
+.quick-reference-images>div img {
+    width: 100% !important;
+}

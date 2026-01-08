@@ -6,7 +6,6 @@
 
 .content-display-body-shell img.remove-float {
     float: unset;
-    width: unset;
     margin: 0;
 }
 

@@ -13,7 +13,7 @@ type AncestryImages = 'dwarfImage' | 'elfImage' | 'humanImage' | 'orcImage' | 'p
 
 type ClassImages = 'expertImage' | 'fighterImage' | 'servantImage' | 'socialiteImage' | 'weirdAdeptImage'
 
-type GMImages = 'structureImage' | createHexCrawlImages | popHexCrawlImages | villageMapImages | dungeonImages
+type GMImages = 'structureImage' | createHexCrawlImages | popHexCrawlImages | villageMapImages | dungeonImages | quickReferenceComponents
 
 type createHexCrawlImages = 'createHexExample1' | 'createHexExample2' | 'createHexExample3.1' | 'createHexExample3.2' | 'createHexExample4' | 'createHexExample5' | 'createHexExampleFinal'
 
@@ -66,6 +66,8 @@ type gem = 'gemType' | 'gemSize' | 'gemShape'
 type personal = 'timePeriod' | 'relatedTo'
 
 type ancestry = 'freeAncestries' | 'deluxeAncestries'
+
+type quickReferenceComponents = 'factionQuickReference' | 'monsterQuickReference' | 'npcQuickReference' | 'obstacleQuickReference' | 'perilQuickReference' | 'settlementQuickReference' | 'threatQuickReference'
 
 export type EquipmentTables = 'priceByDistance' | 'animalLivestock' | 'animalMounts' | 'animalBarding' | 'animalFeed' | 'armorPrices' | 'armorStats' | 'beverages' | 'clothing' | 'clothingAccessories' | 'containersHeavy' | 'containersPersonal' | 'musicalInstruments' | 'poisonsNToxins' | 'rope' | 'shields' | 'shieldStats' | 'toolsAdventuring' | 'toolsGeneral' | 'toolsTrade' | 'weaponsAxes' | 'weaponsPolearms' | 'weaponsSidearms' | 'weaponsSwords' | 'weaponsTrauma' | 'weaponsRanged' | 'ammunition' | 'meleeWeaponStats' | 'rangedWeaponStats'
 
