@@ -39,12 +39,12 @@ export default function ChapterDisplay({ setLoading, pathname, hash }: Props) {
 
     function updateTab() {
         if (chapter) {
-            const { book, section, chapter: chapterInfo, chapterName} = chapter
+            const { book, section, chapter: chapterNumber, chapterName} = chapter
             const guide = book === 'rules' ? 'R' : book === 'players' ? 'P' : 'G'
             if (section || section === 0) {
-                document.title = `${guide}.${section}-${chapterInfo} ${chapterName} - Bonfire`
+                document.title = `${guide}.${section}-${chapterNumber} ${chapterName} - Bonfire`
             } else {
-                document.title = `${guide}.${chapter} ${chapterName} - Bonfire`
+                document.title = `${guide}.${chapterNumber} ${chapterName} - Bonfire`
             }
         } else {
             document.title = 'Bonfire SRD'
