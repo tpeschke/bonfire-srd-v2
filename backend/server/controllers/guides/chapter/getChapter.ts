@@ -27,7 +27,7 @@ export async function getChapterWorkhorse(request: ChapterRequest, response: Res
             checkForContentTypeBeforeSending(response, { message: "You Don't Have Permissions to View These Chapters" })
         }
     } else if (book === 'gms') {
-        if (user?.patreon && user?.patreon >= 5) {
+        if ((user?.patreon && user?.patreon >= 5) || chapter === '0-1') {
             const [section, subsection] = chapter.split('-')
             sendChapterContents(response, user, book, chapter, chapterCache[book][+section][+subsection - 1])
         } else {

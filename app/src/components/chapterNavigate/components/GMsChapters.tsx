@@ -75,7 +75,7 @@ function formatChapter(
 ) {
     const sectionNNumber = `${sectionNumber}-${chapterNumber}`
     const routePath = `/gms/${sectionNNumber}`
-    if (userCanViewGMG) {
+    if (userCanViewGMG || sectionNumber === 0) {
         return <Link onMouseEnter={_ => preloadChapter(routePath)} key={sectionNNumber} to={routePath} className={routePath === currentRoute ? 'active-route' : ''}><h2>{chapterNumber} {route}</h2></Link>
     }
     return <h2 key={sectionNNumber} className='disabled-route'>{chapterNumber} {route}</h2>
