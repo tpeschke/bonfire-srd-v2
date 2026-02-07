@@ -48,7 +48,9 @@ export const gameMasterChapters = [
             'Creating a Starting Village',
             'Mapping the Village',
             'Creating a Mini-Dungeon',
-            'Creating a Dungeon Map',
+            'Creating Dice-Drop Map',
+            'Creating Impulse Map',
+            'Creating Lock & Key Map',
             'Creating Factions',
             'Creating an NPC'
         ]
