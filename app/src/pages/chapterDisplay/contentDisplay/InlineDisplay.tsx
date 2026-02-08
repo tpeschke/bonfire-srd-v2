@@ -161,6 +161,14 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <QuickReferenceImages src={['https://i.imgur.com/VDiTsK9.png', 'https://i.imgur.com/ZEZOg8D.png']} />
         case 'threatQuickReference':
             return <QuickReferenceImages src={['https://i.imgur.com/c3Yzhmr.png', 'https://i.imgur.com/bTGzVBK.png']} />
+        case 'diceDropStep2':
+            return <Image src='https://imgur.com/m3nSwqV.png' goran={false} removeFloat={true} />
+        case 'diceDropStep3Pruned':
+            return <Image src='https://imgur.com/hAbAsTI.png' goran={false} removeFloat={true} />
+        case 'diceDropStep3Legible':
+            return <Image src='https://imgur.com/4jCmMdk.png' goran={false} removeFloat={true} />
+        case 'diceDropFinal':
+            return <Image src='https://imgur.com/f1CDThH.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':
