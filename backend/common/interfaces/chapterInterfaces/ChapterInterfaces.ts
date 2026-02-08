@@ -21,11 +21,13 @@ type popHexCrawlImages = 'popHexExample1' | 'popHexExample2' | 'popHexExample3' 
 
 type villageMapImages = 'villageMap1' | 'villageMap2.1' | 'villageMap2.2' | 'villageMap3.1' | 'villageMap3.2' | 'villageMapFinal'
 
-type dungeonImages = 'wizardTowerMapImage' | 'roomExampleMap' | lockNKeyMappingImages | diceDropImages
+type dungeonImages = 'wizardTowerMapImage' | 'roomExampleMap' | lockNKeyMappingImages | diceDropImages | impulseMapImage
 
 type lockNKeyMappingImages = 'lockAndKeyExplanation' | '1to1Variants' | '1toManyVariants' | '1WayVariants' | 'ManyTo1Variants' | 'OrSwitchVariants' | 'prereqVariants' | 'singleToManyVariants' | 'step2Example' | 'step4Example1' | 'step4Example2' | 'step4Example3' | 'step4Example4' | 'step4Example5' | 'step4Example6' | 'step4Example7' | 'step5Example1' | 'step5Example2' | 'step5Example3' | 'step5Example4' | 'step5Example5' | 'step5ExampleFinal'
 
 type diceDropImages = 'diceDropStep2' | 'diceDropStep3Pruned' | 'diceDropStep3Legible' | 'diceDropFinal'
+
+type impulseMapImage = 'impulseNodeMap' | 'impulseFinalNodeMap'
 
 type additionalToolsImages = 'timeWheel' | 'passingAThreatImage' | 'overlandFrequencyExample' | 'overlandEncounterTable'
 

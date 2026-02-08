@@ -169,6 +169,10 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://imgur.com/4jCmMdk.png' goran={false} removeFloat={true} />
         case 'diceDropFinal':
             return <Image src='https://imgur.com/f1CDThH.png' goran={false} removeFloat={true} />
+        case 'impulseNodeMap':
+            return <Image src='https://imgur.com/2HTrQXu.png' goran={false} removeFloat={true} />
+        case 'impulseFinalNodeMap':
+            return <Image src='https://imgur.com/F9lprls.png' goran={false} removeFloat={true} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':
