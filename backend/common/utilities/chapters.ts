@@ -67,7 +67,7 @@ export const gameMasterChapters = [
     {
         section: 'Additional Tools',
         chapters: [
-            'Travel, Weather, & Random Encounters',
+            'Session Tools',
             'Organizing Notes',
             'Other Tools & Resources'
         ]
