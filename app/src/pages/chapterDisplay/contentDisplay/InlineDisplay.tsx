@@ -140,7 +140,7 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
         case 'relationshipChart':
             return <Image src='https://i.imgur.com/s2NN4w3.jpeg' goran={false} />
         case 'timeWheel':
-            return <Image src='https://i.imgur.com/5GzwEDU.png' goran={false} removeFloat={true} />
+            return <Image src='https://imgur.com/zjGQ0VK.png' goran={false} removeFloat={true} />
         case 'passingAThreatImage':
             return <Image src='https://i.imgur.com/S3aojG4.png' goran={false} removeFloat={true} />
         case 'overlandFrequencyExample':
