@@ -29,7 +29,7 @@ type diceDropImages = 'diceDropStep2' | 'diceDropStep3Pruned' | 'diceDropStep3Le
 
 type impulseMapImage = 'impulseNodeMap' | 'impulseFinalNodeMap'
 
-type additionalToolsImages = 'timeWheel' | 'passingAThreatImage' | 'overlandFrequencyExample' | 'overlandEncounterTable'
+type additionalToolsImages = 'emotionalResponses' | 'timeWheel' | 'passingAThreatImage' | 'overlandFrequencyExample' | 'overlandEncounterTable'
 
 type uniqueItemTables = uniqueItemBaseTables | uniqueItemArmorTables | uniqueItemClothingTables | uniqueItemFoodTables | uniqueItemWeaponTables | materials | supportTables
 

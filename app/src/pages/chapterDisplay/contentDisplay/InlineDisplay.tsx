@@ -13,6 +13,7 @@ import MeleeWeaponStats from './inlineComponents/equipmentTables/MeleeWeaponStat
 import RangedWeaponStats from './inlineComponents/equipmentTables/RangedWeaponStats';
 import Table from './inlineComponents/uniqueItemTables/Table';
 import QuickReferenceImages from './inlineComponents/quickReferenceImages/QuickReferenceImages';
+import EmotionalResponses from './inlineComponents/emotionalResponses';
 
 interface Props {
     componentInfo: ComponentContent,
@@ -139,6 +140,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://i.imgur.com/88CSkjN.png' goran={false} removeFloat={true} />
         case 'relationshipChart':
             return <Image src='https://i.imgur.com/s2NN4w3.jpeg' goran={false} />
+        case 'emotionalResponses':
+            return <EmotionalResponses />
         case 'timeWheel':
             return <Image src='https://imgur.com/zjGQ0VK.png' goran={false} removeFloat={true} />
         case 'passingAThreatImage':

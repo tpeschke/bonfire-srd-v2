@@ -167,6 +167,12 @@ tbody tr:nth-child(even) {
     background: lightgray;
 }
 
+.sub-row {
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+    text-decoration: 'italic';
+}
+
 @media (max-width: 769px) {
     table {
         float: unset;
