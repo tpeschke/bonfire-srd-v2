@@ -67,6 +67,7 @@ async function sendChapterContents(response: Response, user: User | null | undef
             guideChapterNameArray = gameMasterChapters[+section].chapters
 
             const populatedChapter = populateChapterContents(book, guideChapterNameArray, +section, +subsection, chapterContents)
+
             checkForContentTypeBeforeSending(response, {
                 ...populatedChapter,
                 ...getUserAppropriateChapter(user, populatedChapter.chapterContents, populatedChapter.navigation, populatedChapter.info)

@@ -1,5 +1,6 @@
 import burdensNInjuriesInfo from "./chapterInfo/burdensNInjuries";
 import equipmentInfo from "./chapterInfo/equipment/equipment";
+import impulses from "./chapterInfo/impulses";
 import kitInfo from "./chapterInfo/kits";
 import uniqueItems from "./chapterInfo/uniqueItems/uniqueItems";
 import rudimentInfo from "./chapterInfo/weird";
@@ -19,7 +20,15 @@ export default {
     gms: [
         [],
         [],
-        [],
+        [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            impulses
+        ],
         [
             null,
             uniqueItems,

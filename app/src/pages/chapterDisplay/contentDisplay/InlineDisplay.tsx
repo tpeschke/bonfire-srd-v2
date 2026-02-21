@@ -14,6 +14,7 @@ import RangedWeaponStats from './inlineComponents/equipmentTables/RangedWeaponSt
 import Table from './inlineComponents/uniqueItemTables/Table';
 import QuickReferenceImages from './inlineComponents/quickReferenceImages/QuickReferenceImages';
 import EmotionalResponses from './inlineComponents/emotionalResponses';
+import ImpulseRoomList from './inlineComponents/impulseRoomList/ImpulseRoomList';
 
 interface Props {
     componentInfo: ComponentContent,
@@ -176,6 +177,8 @@ export default function InlineDisplay({ componentInfo, chapterInfo }: Props) {
             return <Image src='https://imgur.com/2HTrQXu.png' goran={false} removeFloat={true} />
         case 'impulseFinalNodeMap':
             return <Image src='https://imgur.com/F9lprls.png' goran={false} removeFloat={true} />
+        case 'impulseRoomList':
+            return <ImpulseRoomList info={chapterInfo ? chapterInfo.info : []} />
         case 'kits':
             return <Kits info={chapterInfo ? chapterInfo.info : []} />
         case 'originsShapesTraditions':

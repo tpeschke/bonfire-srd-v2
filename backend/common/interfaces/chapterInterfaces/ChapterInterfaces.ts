@@ -27,7 +27,7 @@ type lockNKeyMappingImages = 'lockAndKeyExplanation' | '1to1Variants' | '1toMany
 
 type diceDropImages = 'diceDropStep2' | 'diceDropStep3Pruned' | 'diceDropStep3Legible' | 'diceDropFinal'
 
-type impulseMapImage = 'impulseNodeMap' | 'impulseFinalNodeMap'
+type impulseMapImage = 'impulseRoomList' | 'impulseNodeMap' | 'impulseFinalNodeMap'
 
 type additionalToolsImages = 'emotionalResponses' | 'timeWheel' | 'passingAThreatImage' | 'overlandFrequencyExample' | 'overlandEncounterTable'
 
@@ -117,7 +117,7 @@ export interface LockedNavigation {
 export type ChapterInfo = null | ChapterInfoBaseObject
 
 export interface ChapterInfoBaseObject {
-    type: 'kits' | 'rudiments' | 'burdensNInjuries' | 'equipment' | 'uniqueItems',
+    type: 'kits' | 'rudiments' | 'burdensNInjuries' | 'equipment' | 'uniqueItems' | 'impulses',
     info: any[]
 }
 
