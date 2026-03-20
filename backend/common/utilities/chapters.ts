@@ -44,7 +44,7 @@ export const gameMasterChapters = [
         section: 'Creation Tools',
         chapters: [
             'Creating a Hex Map',
-            'Population a Hex Map',
+            'Populating a Hex Map',
             'Creating a Starting Village',
             'Mapping the Village',
             'Creating a Mini-Dungeon',
