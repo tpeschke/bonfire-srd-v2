@@ -41,5 +41,5 @@ function createSpecificNavigation(contents: ChapterContents) {
 }
 
 function createNavId(section: string): string {
-    return section.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?\<\>]/g, "").replace(/\ /g, '-').toLowerCase()
+    return section.replace(/[’'.,\/#!$%\^&\*;:{}=\-_`~()?\<\>]/g, "").replace(/\ /g, '-').toLowerCase()
 }
