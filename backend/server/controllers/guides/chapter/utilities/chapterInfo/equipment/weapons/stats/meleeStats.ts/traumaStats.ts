@@ -4,7 +4,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Bec De Corbin',
         size: 'L',
-        damage: '2d10!',
+        damage: '1d10!+6',
         recovery: 16,
         damageType: 'C',
         parry: 0,
@@ -51,7 +51,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Goedendag',
         size: 'L',
-        damage: '2d8!',
+        damage: '1d8!+5',
         recovery: 11,
         damageType: 'P',
         parry: 0,
@@ -60,7 +60,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Great Hammer',
         size: 'H',
-        damage: '2d12!+6',
+        damage: '1d12!+13',
         recovery: 22,
         damageType: 'C',
         parry: 0,
@@ -69,7 +69,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Mace',
         size: 'M',
-        damage: '1d12!',
+        damage: '1d12!+2',
         recovery: 10,
         damageType: 'C',
         parry: 0,
@@ -78,7 +78,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Maul',
         size: 'L',
-        damage: '2d12!',
+        damage: '1d12!+7',
         recovery: 17,
         damageType: 'C',
         parry: 0,
@@ -97,7 +97,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'Quarterstaff',
         size: 'L',
-        damage: '1d10!',
+        damage: '1d10!+2',
         recovery: 10,
         damageType: 'C',
         parry: 4,
@@ -116,7 +116,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'War Flail',
         size: 'M',
-        damage: '1d10!+1d4!',
+        damage: '1d10!+3',
         recovery: 13,
         damageType: 'C',
         parry: 0,
@@ -126,7 +126,7 @@ export const traumaStats: MeleeWeaponStatObject[] = [
     {
         name: 'War Hammer',
         size: 'M',
-        damage: 'd12!+d4!',
+        damage: 'd12!+3',
         recovery: 13,
         damageType: 'C',
         parry: 0,
