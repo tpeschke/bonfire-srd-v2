@@ -41,7 +41,7 @@ export default function EmotionalResponses() {
                         <td>Lose focus and lash out</td>
                     </tr>
                     <tr className="sub-row italic">
-                        <td>Give an ally a negative Relationship with you. Rank = 1/2 Rank</td>
+                        <td>Give an ally 1d4! Stress / Rank</td>
                         <td>-2 Penalty to next Def Check; cannot disengaged from enemy</td>
                         <td>Equipment gains 1 Wear / 2 Ranks</td>
                     </tr>
