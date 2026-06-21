@@ -3,13 +3,15 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { ChapterContentsReturn } from '@srd/common/interfaces/chapterInterfaces/ChapterInterfaces'
 
 interface State {
-    rulesGuideChapters: ChapterContentsReturn[],
-    playersGuideChapters: ChapterContentsReturn[]
+  rulesGuideChapters: ChapterContentsReturn[],
+  playersGuideChapters: ChapterContentsReturn[],
+  gmsGuideChapters: ChapterContentsReturn[][]
 }
 
 const initialState: State = {
   rulesGuideChapters: [],
-  playersGuideChapters: []
+  playersGuideChapters: [],
+  gmsGuideChapters: []
 }
 
 export const chapterSlice = createSlice({
@@ -22,6 +24,14 @@ export const chapterSlice = createSlice({
         state.rulesGuideChapters[payload.chapter] = payload
       } else if (payload.book === 'players') {
         state.playersGuideChapters[payload.chapter] = payload
+      } else if (payload.book === 'gms') {
+        if ((payload.section || payload.section === 0) && !state.gmsGuideChapters[payload.section]) {
+          state.gmsGuideChapters[payload.section] = []
+        }
+
+        if (payload.section || payload.section === 0) {
+          state.gmsGuideChapters[payload.section][payload.chapter] = payload
+        }
       }
     }
   },

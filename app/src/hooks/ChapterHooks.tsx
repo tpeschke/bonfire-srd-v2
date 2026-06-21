@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { chapterURL } from '../frontend-config.ts'
 import { useDispatch, useSelector } from "react-redux"
 import { saveChapter } from "../redux/slices/chapterSlice.tsx"
-import { ChapterContentsReturn } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces.ts"
+import { Books, ChapterContentsReturn } from "@srd/common/interfaces/chapterInterfaces/ChapterInterfaces.ts"
 import { delay } from '@srd/common/utilities/timingFunctions.ts'
 
 interface ChapterHookReturn {
@@ -22,30 +22,36 @@ export default function ChapterHook(pathname?: string): ChapterHookReturn {
 
     const cachedRulesChapters = useSelector((state: any) => state.chapter.rulesGuideChapters)
     const cachedPlayerChapters = useSelector((state: any) => state.chapter.playersGuideChapters)
+    const cachedGMChapters = useSelector((state: any) => state.chapter.gmsGuideChapters)
 
     useEffect(() => {
         if (pathname && pathname !== currentRoute) {
             const [_, book, chapterNumber] = pathname.split('/')
 
-            let chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book, chapterNumber)
+            let chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book as Books, chapterNumber)
 
             if (chapterInfo) {
                 setInfo(chapterInfo)
             } else {
-                getChapterFromServer(book, chapterNumber).then(({ data }) => setInfo(data))
+                getChapterFromServer(book as Books, chapterNumber).then(({ data }) => setInfo(data))
             }
         }
     }, [pathname])
 
-    function getChapterFromCache(book: string, chapterNumber: string): ChapterContentsReturn | undefined {
+    function getChapterFromCache(book: Books, chapterNumber: string): ChapterContentsReturn | undefined {
         if (book === 'rules') {
             return cachedRulesChapters[chapterNumber]
         } else if (book === 'players') {
             return cachedPlayerChapters[chapterNumber]
+        } else if (book === 'gms') {
+            const [section, chapter] = chapterNumber.split('-')
+            if (cachedGMChapters[+section]) {
+                return cachedGMChapters[+section][+chapter]
+            }
         }
     }
 
-    async function getChapterFromServer(book: string, chapterNumber: string) {
+    async function getChapterFromServer(book: Books, chapterNumber: string) {
         return axios.get(chapterURL + `${book}.${chapterNumber}`)
     }
 
@@ -61,10 +67,10 @@ export default function ChapterHook(pathname?: string): ChapterHookReturn {
         const newTimeoutID = setTimeout(async () => {
             const [_, book, chapterNumber] = pathname.split('/')
 
-            const chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book, chapterNumber)
+            const chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book as Books, chapterNumber)
 
             if (!chapterInfo) {
-                const { data } = await getChapterFromServer(book, chapterNumber)
+                const { data } = await getChapterFromServer(book as Books, chapterNumber)
                 dispatch(saveChapter(data))
             }
         }, 250)
@@ -100,10 +106,10 @@ export default function ChapterHook(pathname?: string): ChapterHookReturn {
 
             const [book, chapterNumber] = preloadOrder[index].split('/')
 
-            const chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book, chapterNumber)
+            const chapterInfo: ChapterContentsReturn | undefined = getChapterFromCache(book as Books, chapterNumber)
 
             if (!chapterInfo) {
-                const { data } = await getChapterFromServer(book, chapterNumber)
+                const { data } = await getChapterFromServer(book as Books, chapterNumber)
                 dispatch(saveChapter(data))
             }
 
