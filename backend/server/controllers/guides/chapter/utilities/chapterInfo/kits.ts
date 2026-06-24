@@ -89,8 +89,25 @@ const kitInfo: KitInfo = {
             title: "Basic Fighter's Kit",
             items: [
                 { item: "Gambeson*", size: "n/a", sellBack: "90 sc" },
-                { item: "Sheathe (M or H, depending on what weapon is chosen)*", size: "n/a", sellBack: "5 sc" },
-                { item: "1 L Melee Weapon or 1 M Melee Weapon & 3 Thrown Ranged Weapons*", size: "M or n/a", sellBack: "100 sc" },
+                { item: "Sheathe (M or L, depending on what weapon is chosen)*", size: "n/a", sellBack: "5 sc" },
+                { item: "1 M Melee Weapon or any Pole-arm*", size: "M or n/a", sellBack: "25 sc" },
+                { item: "3 Thrown Ranged Weapons*", size: "n/a", sellBack: "15 sc per" },
+                { item: "Sheathe, Small*", size: "n/a", sellBack: "2.5 sc" },
+                { item: "1 S Weapon*", size: "n/a", sellBack: "15 sc" },
+                { item: "Belt, Leather*", size: "n/a", sellBack: "1 sc" },
+                { item: "Breeches*", size: "n/a", sellBack: "12 sc" },
+                { item: "Shirt*", size: "n/a", sellBack: "13 sc" },
+                { item: "Boots, Leather*", size: "n/a", sellBack: "10 sc" },
+                { item: "Rations, Person, Day x3", size: "3S", sellBack: "7.5 sc" }
+            ],
+            weight: "1M or 2M",
+            extraCash: "1d10! sc"
+        },
+        {
+            title: "2-Handed Fighter's Kit",
+            items: [
+                { item: "Sheathe (L)*", size: "n/a", sellBack: "5 sc" },
+                { item: "1 L Melee Weapon*", size: "M", sellBack: "100 sc" },
                 { item: "Sheathe, Small*", size: "n/a", sellBack: "2.5 sc" },
                 { item: "1 S Weapon*", size: "n/a", sellBack: "15 sc" },
                 { item: "Belt, Leather*", size: "n/a", sellBack: "1 sc" },
@@ -105,7 +122,7 @@ const kitInfo: KitInfo = {
         {
             title: "Armor Fighter's Kit",
             items: [
-                { item: "Coat of Plates*", size: "S", sellBack: "190 sc" },
+                { item: "Coat of Plates* or Leather Armor*", size: "S", sellBack: "190 sc" },
                 { item: "Sheathe (M)*", size: "n/a", sellBack: "5 sc" },
                 { item: "1 M Melee Weapon*", size: "S", sellBack: "50 sc" },
                 { item: "Belt, Leather*", size: "n/a", sellBack: "1 sc" },

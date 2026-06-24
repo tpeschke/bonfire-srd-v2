@@ -35,7 +35,7 @@ export default function EmotionalResponses() {
                         <td>+1d4! Stress / 2 Ranks on each Check against Obstacle</td>
                     </tr>
                     <tr>
-                        <th rowSpan={2}>Fury</th>
+                        <th rowSpan={2}>Anger</th>
                         <td>Misdirect anger</td>
                         <td>Full on attack</td>
                         <td>Lose focus and lash out</td>
@@ -68,7 +68,7 @@ export default function EmotionalResponses() {
                         <td>+1d4! Stress / 2 Ranks on each Check against Obstacle</td>
                     </tr>
                     <tr>
-                        <th rowSpan={2}>Terror</th>
+                        <th rowSpan={2}>Fear</th>
                         <td>Excuse yourself from the situation</td>
                         <td>Run for you life!</td>
                         <td>Give up; it's too much for you</td>
