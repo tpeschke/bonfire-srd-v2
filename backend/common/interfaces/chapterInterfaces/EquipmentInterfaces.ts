@@ -96,7 +96,9 @@ export interface MeleeWeaponStatObject {
     damageType: string,
     parry: number,
     measure: number,
-    bonus?: boolean
+    bonus?: boolean,
+    oneHanding?: boolean,
+    brace?: boolean
 }
 
 export interface RangedWeaponObject {

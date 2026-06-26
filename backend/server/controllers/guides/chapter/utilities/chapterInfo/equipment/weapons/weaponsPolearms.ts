@@ -15,7 +15,7 @@ export const weaponsPolearms: EquipmentItem[] = [
     { item: 'Short Spear', size: 'M', complexity: 1, basePrice: 16 },
     { item: 'Sovnya', size: 'L', complexity: 2, basePrice: 32 },
     { item: 'Voulge', size: 'L', complexity: 2, basePrice: 27 },
-    { item: 'War-scythe', size: 'L', complexity: 2, basePrice: 16 }
+    { item: 'War-scythe', size: 'L', complexity: 2, basePrice: 10 }
 ]
 
 export const weaponsPolearmsFree: EquipmentItem[] = [

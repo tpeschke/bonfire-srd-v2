@@ -5,40 +5,31 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         name: 'Ahlspiess',
         size: 'L',
         damage: '2d8!',
-        recovery: 11,
+        recovery: 9,
         damageType: 'P',
         parry: 0,
         measure: 6,
-        bonus: true
+        oneHanding: true,
+        brace: true,
     },
     {
         name: 'Bill',
+        size: 'L',
+        damage: '2d10!',
+        recovery: 13,
+        damageType: 'P',
+        parry: 0,
+        measure: 7.25,
+        brace: true,
+    },
+    {
+        name: 'Glaive',
         size: 'L',
         damage: '4d4!',
         recovery: 14,
         damageType: 'S',
         parry: 0,
         measure: 8,
-        bonus: true
-    },
-    {
-        name: 'Glaive',
-        size: 'L',
-        damage: '8d3!',
-        recovery: 20,
-        damageType: 'S',
-        parry: 0,
-        measure: 8,
-        bonus: true
-    },
-    {
-        name: 'Guisarme',
-        size: 'L',
-        damage: '2d8!',
-        recovery: 11,
-        damageType: 'P',
-        parry: 0,
-        measure: 7.5,
         bonus: true
     },
     {
@@ -59,7 +50,8 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 5,
-        bonus: true
+        bonus: true,
+        brace: true
     },
     {
         name: 'Javelin',
@@ -69,7 +61,8 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 4.25,
-        bonus: true
+        bonus: true,
+        oneHanding: true
     },
     {
         name: 'Lance',
@@ -79,7 +72,8 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 10,
-        bonus: true
+        bonus: true,
+        brace: true
     },
     {
         name: 'Lucerne',
@@ -103,12 +97,12 @@ export const polearmStats: MeleeWeaponStatObject[] = [
     {
         name: 'Pike',
         size: 'H',
-        damage: '2d8!',
+        damage: '4d8!',
         recovery: 12,
         damageType: 'P',
         parry: 0,
-        measure: 13,
-        bonus: true
+        measure: 23,
+        brace: true
     },
     {
         name: 'Planson',
@@ -118,16 +112,18 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 2,
         measure: 4,
+        oneHanding: true
     },
     {
         name: 'Ranseur',
         size: 'L',
-        damage: '2d10!',
-        recovery: 13,
+        damage: '2d8!',
+        recovery: 10,
         damageType: 'P',
-        parry: 0,
-        measure: 7.25,
-        bonus: true
+        parry: 4,
+        measure: 8,
+        oneHanding: true,
+        brace: true,
     },
     {
         name: 'Short Spear',
@@ -137,26 +133,17 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 5,
-    },
-    {
-        name: 'Sovnya',
-        size: 'L',
-        damage: '6d3!',
-        recovery: 17,
-        damageType: 'S',
-        parry: 0,
-        measure: 6.5,
-        bonus: true
+        oneHanding: true,
     },
     {
         name: 'Voulge',
         size: 'L',
-        damage: '2d8!',
-        recovery: 9,
-        damageType: 'P',
+        damage: '8d3!',
+        recovery: 20,
+        damageType: 'S',
         parry: 0,
         measure: 8,
-        bonus: true
+        brace: true
     },
     {
         name: 'War-scythe',
@@ -166,7 +153,6 @@ export const polearmStats: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 6.25,
-        bonus: true
     }
 ]
 
@@ -174,12 +160,13 @@ export const polearmStatsFree: MeleeWeaponStatObject[] = [
     {
         name: 'Ranseur',
         size: 'L',
-        damage: '2d10!',
-        recovery: 13,
+        damage: '2d8!',
+        recovery: 10,
         damageType: 'P',
-        parry: 0,
-        measure: 7.25,
-        bonus: true
+        parry: 4,
+        measure: 8,
+        oneHanding: true,
+        brace: true,
     },
     {
         name: 'Short Spear',
@@ -189,5 +176,6 @@ export const polearmStatsFree: MeleeWeaponStatObject[] = [
         damageType: 'P',
         parry: 0,
         measure: 5,
-    }
+        oneHanding: true,
+    },
 ]

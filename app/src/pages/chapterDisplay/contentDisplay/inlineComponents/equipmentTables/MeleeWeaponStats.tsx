@@ -19,7 +19,7 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
         </>
     )
 
-    function populateBodyRows({ name, size, damage, recovery, damageType, parry, measure, bonus }: MeleeWeaponStatObject, index: number) {
+    function populateBodyRows({ name, size, damage, recovery, damageType, parry, measure, bonus, oneHanding, brace }: MeleeWeaponStatObject, index: number, isPolearm?: boolean) {
         return (
             <tr key={index}>
                 <td>{name}</td>
@@ -30,6 +30,10 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
                 <td>{parry}</td>
                 <td>{measure}</td>
                 <td>{bonus ? 'Yes' : ''}</td>
+                {isPolearm && <>
+                    <td>{oneHanding ? 'Yes' : ''}</td>
+                    <td>{brace ? 'Yes' : ''}</td>
+                </>}
             </tr>
         )
     }
@@ -44,16 +48,18 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {axes.map(populateBodyRows)}
+                    {axes.map((weapon, index) => populateBodyRows(weapon, index))}
                 </tbody>
                 <thead>
                     <tr>
                         <th>Polearms</th>
                         {headers}
+                        <th>1-Handable?</th>
+                        <th>Braceable?</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {polearms.map(populateBodyRows)}
+                    {polearms.map((weapon, index) => populateBodyRows(weapon, index, true))}
                 </tbody>
                 <thead>
                     <tr>
@@ -62,7 +68,7 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {sidearms.map(populateBodyRows)}
+                    {sidearms.map((weapon, index) => populateBodyRows(weapon, index))}
                 </tbody>
                 <thead>
                     <tr>
@@ -71,7 +77,7 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {swords.map(populateBodyRows)}
+                    {swords.map((weapon, index) => populateBodyRows(weapon, index))}
                 </tbody>
                 <thead>
                     <tr>
@@ -80,7 +86,7 @@ export default function MeleeWeaponStats({ meleeWeaponStats }: Props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {trauma.map(populateBodyRows)}
+                    {trauma.map((weapon, index) => populateBodyRows(weapon, index))}
                 </tbody>
             </table>
         </div>
