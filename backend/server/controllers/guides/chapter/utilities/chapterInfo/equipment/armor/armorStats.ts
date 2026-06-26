@@ -8,7 +8,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 1,
         recMod: 2,
         fatigue: 1,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Buff Coat',
@@ -26,7 +26,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 1,
         recMod: 5,
         fatigue: 3,
-        skillAdj: -2
+        skillAdj: -1
     },
     {
         name: 'Brigandine',
@@ -35,7 +35,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 4,
         recMod: 5,
         fatigue: 3,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Chainmail',
@@ -44,7 +44,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 2,
         recMod: 2,
         fatigue: 3,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Coat of Plates',
@@ -53,7 +53,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 2,
         recMod: 3,
         fatigue: 2,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Full Plate',
@@ -62,7 +62,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 10,
         recMod: 9,
         fatigue: 8,
-        skillAdj: - 8
+        skillAdj: -4
     },
     {
         name: 'Gambeson',
@@ -71,7 +71,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 0,
         recMod: 0,
         fatigue: 1,
-        skillAdj: -2
+        skillAdj: -1
     },
     {
         name: 'Lamellar',
@@ -80,7 +80,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 2,
         recMod: 0,
         fatigue: 1,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Leather',
@@ -89,7 +89,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 2,
         recMod: 2,
         fatigue: 1,
-        skillAdj: -2
+        skillAdj: -1
     },
     {
         name: 'Plated Mail',
@@ -98,7 +98,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 6,
         recMod: 6,
         fatigue: 6,
-        skillAdj: -6
+        skillAdj: -3
     },
     {
         name: 'Ringmail',
@@ -107,7 +107,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 0,
         recMod: 5,
         fatigue: 2,
-        skillAdj: -4
+        skillAdj: -2
     },
     {
         name: 'Scale',
@@ -116,7 +116,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 7,
         recMod: 5,
         fatigue: 5,
-        skillAdj: -8
+        skillAdj: -4
     },
     {
         name: 'Splintmail',
@@ -125,7 +125,7 @@ export const armorStats: ArmorStatObject[] = [
         initMod: 3,
         recMod: 3,
         fatigue: 0,
-        skillAdj: -4
+        skillAdj: -2
     }
 ]
 
